@@ -178,11 +178,12 @@ export class Gallery extends React.Component{
     {
       photos.push(photoTemplate("https://picsum.photos/300/200"));
     }
+    
     return photos;
   }
   setPage(page)
   {
-
+    console.log()
   }
   render()
   {
