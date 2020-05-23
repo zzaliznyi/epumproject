@@ -9,7 +9,7 @@ export class Header extends React.Component{
   constructor(props)
   {
     super(props);
-    console.log("");
+    this.state = {logo: ImageLoader('logo')}
   }
   render(){
     return (
@@ -17,7 +17,7 @@ export class Header extends React.Component{
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark  fixed-top ">
   
   <a class="navbar-brand" href="#">
-    <img src={require(`${ImageLoader("logo")}`)} alt="" loading="lazy"></img>
+    <img src={require(`${this.state.logo}`)} alt="" loading="lazy"></img>
   </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
