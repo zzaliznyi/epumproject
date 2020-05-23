@@ -1,104 +1,123 @@
-$navbar_height: 80px;
-$m_content_padding:15%;
-$content_width: 1000px;
-body {
-    margin: 0;
-    list-style: none;
-    background-color: black;
-    padding: 0;
-}
-
-.container {
-    padding: 0;
-}
-
-.navbar {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 29%, rgba(113, 0, 0, 1) 87%);
-    height: $navbar_height;
-    .navbar-brand {
+    $navbar_height: 80px;
+    $m_content_padding:15%;
+    $content_width: 1000px;
+    body {
+        margin: 0;
+        list-style: none;
+        background-color: black;
         padding: 0;
-        img {
-            max-height: $navbar_height - 16;
-            width: auto;
-        }
     }
-}
-
-.about_block {
-    width: 100%;
-    height: 600px;
-    background-color: black;
-}
-
-.h_carousel div {
-    width: 100%;
-    height: auto;
-}
-
-.b_block {
-    margin: auto;
-    width: 1000px;
-    height: auto;
-    background-color: white;
-    padding-top: 15px;
-    .b_m_info {
-        padding-top: $navbar_height;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        .h_carousel {
-            width: 610px;
-            height: auto;
-            margin: auto;
-            div div img {
-                max-height: 300px;
+    
+    .container {
+        padding: 0;
+    }
+    
+    .navbar {
+        background: rgb(0, 0, 0);
+        background: linear-gradient(90deg, rgba(0, 0, 0, 1) 29%, rgba(113, 0, 0, 1) 87%);
+        height: $navbar_height;
+        padding: 0;
+        .navbar-brand {
+            padding-left: 16px;
+            img {
+                max-height: $navbar_height;
+                width: auto;
             }
         }
-        .b_info {
-            background-color: white;
-            width: 350px;
-        }
     }
-    hr {
-        margin: 4px 0;
+    
+    .about_block {
+        width: 100%;
+        height: 600px;
+        background-color: black;
     }
-    .b_text {
+    
+    .h_carousel div {
+        width: 100%;
+        height: auto;
+    }
+    
+    .b_block {
         margin: auto;
-        width: 90%;
-        padding: 0 1%;
-    }
-}
-
-.gallery {
-    padding-top: $navbar_height;
-    width: $content_width;
-    margin: auto;
-    hr {
+        width: 1000px;
+        height: auto;
         background-color: white;
-    }
-    .g_heading {
-        padding-top: 10px;
-        color: white;
-        h1 {
-            text-align: center;
+        padding-top: 15px;
+        .b_m_info {
+            padding-top: $navbar_height;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            .h_carousel {
+                width: 610px;
+                height: auto;
+                margin: auto;
+                div div img {
+                    max-height: 300px;
+                }
+            }
+            .b_info {
+                background-color: white;
+                width: 350px;
+            }
+        }
+        hr {
+            margin: 4px 0;
+        }
+        .b_text {
+            margin: auto;
+            width: 90%;
+            padding: 3% 1%;
         }
     }
-    .photos {
+    
+    .gallery {
+        padding-top: $navbar_height;
+        width: $content_width;
         margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        .g_photo {
-            width: 300px;
-            height: auto;
-            margin: 5px;
+        hr {
+            background-color: white;
+        }
+        .g_heading {
+            padding-top: 10px;
+            color: white;
+            h1 {
+                text-align: center;
+            }
+        }
+        .photos {
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
             justify-content: center;
+            .g_photo {
+                width: 300px;
+                height: auto;
+                margin: 5px;
+                justify-content: center;
+            }
         }
     }
-    .g_pagination nav {
+    
+    .g_pagination {
         padding-top: 10px;
-        padding-left: 5px;
+        ul {
+            li.page-item .page-link {
+                color: white;
+                background-color: rgb(0, 0, 0);
+                .page-link:hover {
+                    background-color: rgb(94, 1, 1);
+                    color: white;
+                }
+            }
+            .page-item.active .page-link {
+                background-color: rgb(94, 1, 1);
+                color: white;
+                border-color: white;
+            }
+            li.page-item.disabled {
+                visibility: hidden;
+            }
+        }
     }
-}
