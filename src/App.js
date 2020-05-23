@@ -32,7 +32,7 @@ export class Header extends React.Component{
           <a class="nav-link active" href="/biography">Biography</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">SetList</a>
+          <a class="nav-link" href="/albums">Albums</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Order Us</a>
@@ -135,7 +135,7 @@ function photoTemplate(src)
 class Pagination extends React.Component{
   constructor(props){
     super(props);
-    this.state = {page : 1,pages: 3};
+    this.state = {page : 1,pages: 10};
     this.b_state = this.b_state.bind(this);
     this.b_num = this.b_num.bind(this);
     this.page_up = this.page_up.bind(this);
@@ -283,6 +283,70 @@ export class Gallery extends React.Component{
           <Pagination/>
         </div>
       </div>
+    )
+  }
+}
+export class Albums extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  render(){
+    return(
+      <div className="a_container">
+        <A_Item img={ImageLoader('s_bg1')} id="1" />
+        <A_Item img={ImageLoader('s_bg1')} id="2"/>
+      </div>
+    )
+  }
+}
+class A_Item extends React.Component{
+  constructor(props){
+    super(props);
+    this.toggle = this.toggle.bind(this);
+  }
+  toggle(event){
+    const element = event.target;
+    const _state = element.getAttribute("aria-expanded");
+    if(_state == "true") element.innerHTML = "Hide";
+    else element.innerHTML = "Show";
+  }
+  render(){
+    return(
+
+      <div className="a_item">
+        <div className="a_info">
+          <img src={require(`${this.props.img}`)}></img>
+          <div className="a_item_desc">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga libero suscipit eius dignissimos modi officia reprehenderit labore! Molestias necessitatibus veritatis ex, voluptatibus ipsum, amet, voluptatum in cupiditate eaque harum veniam!
+            </p>
+          </div>
+        </div>
+        <p>
+          <button class="btn toggle_button" onClick={this.toggle} type="button" data-toggle="collapse" data-target={"#collapse" + this.props.id} aria-expanded="false" aria-controls="collapseExample">
+            Show
+          </button>
+        </p>
+        <div class="collapse" id={"collapse" + this.props.id}>
+          <table class="table table-dark song-table">
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Some song Name</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+      
     )
   }
 }

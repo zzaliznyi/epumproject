@@ -4,6 +4,7 @@ import './index.css';
 import {Biography} from './App';
 import {Header} from './App';
 import {Gallery} from './App';
+import {Albums} from './App'
 import Home from "./App";
 import * as serviceWorker from './serviceWorker';
 import {
@@ -25,6 +26,10 @@ ReactDOM.render(
         <Route exact path="/gallery">
             <Header/>
             <Gallery/>
+        </Route>
+        <Route exact path="/albums">
+          <Header/>
+          <Albums/>
         </Route>
     </Switch>
 </Router>,
