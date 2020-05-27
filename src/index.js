@@ -25,7 +25,7 @@ ReactDOM.render(
 
           <Biography/>
         </Route>
-        <Route exact path="/gallery">
+        <Route path="/gallery">
 
             <Gallery/>
         </Route>

@@ -114,6 +114,9 @@
             .g_photo {
                 width: 300px;
                 height: auto;
+                img {
+                    width: 100%;
+                }
                 margin: 5px;
                 justify-content: center;
             }

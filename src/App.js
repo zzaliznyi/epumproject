@@ -10,8 +10,17 @@ import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 
 
-
-
+function getQueryVariable(variable) {
+    const query = window.location.search.substring(1);
+    const vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+        const pair = vars[i].split('=');
+        if (decodeURIComponent(pair[0]) == variable) {
+            return decodeURIComponent(pair[1]);
+        }
+    }
+    return undefined;
+}
 export class Header extends React.Component{
   constructor(props)
   {
@@ -22,7 +31,7 @@ export class Header extends React.Component{
   }
   parseLocation(){
     let location = window.location.pathname.split("/").pop();
-    console.log(location.length)
+    //console.log(window.location.search.split('?').pop())
     if(location.length == 0) location = "home";
     return location;
   }
@@ -34,7 +43,7 @@ export class Header extends React.Component{
     const items = document.getElementById('navigation').childNodes;
     items.forEach(item => {
       const text = item.childNodes[0].textContent.toLowerCase();
-      console.log(`Comparing "${text}" and "${this.state.location}"`);
+      //console.log(`Comparing "${text}" and "${this.state.location}"`);
       if(text == location) item.setAttribute('class','nav-item active');
       else item.setAttribute('class','nav-item');
     });
@@ -160,10 +169,18 @@ function photoTemplate(src)
     </div>
   )
 }
+function parsePage(page,pages){
+  //console.log(`Not supposed to be ere! ${page}`)
+  if(!page || page <= 0 || page > pages)
+  {
+     return 1;
+  }
+  else return page;
+}
 class Pagination extends React.Component{
   constructor(props){
     super(props);
-    this.state = {page : 1,pages: 10};
+    this.state = {page : parsePage(parseInt(getQueryVariable('page'))) ,pages: 10};
     this.b_state = this.b_state.bind(this);
     this.b_num = this.b_num.bind(this);
     this.page_up = this.page_up.bind(this);
@@ -171,6 +188,8 @@ class Pagination extends React.Component{
     this.next_state = this.next_state.bind(this);
     this.prev_state = this.prev_state.bind(this);
     this.b_able = this.b_able.bind(this);
+    this.getLink = this.getLink.bind(this);
+    //console.log(this.state.page);
   }
   b_state(el){
     if(this.state.pages <=2)
@@ -191,6 +210,7 @@ class Pagination extends React.Component{
     }
   }
   b_num(el){
+    //console.log(`Page : ${this.state.page}`)
     if(this.state.pages == 2)
     {
       return el;
@@ -236,6 +256,7 @@ class Pagination extends React.Component{
   {
     if(this.state.page != this.state.pages){
       let nextPage = this.state.page + 1;
+      this.props.change_page(nextPage);
       this.setState(state =>({
         page: nextPage
       }));
@@ -244,9 +265,11 @@ class Pagination extends React.Component{
   page_down(){
     if(this.state.page != 1){
       let prevPage = this.state.page - 1;
+      this.props.change_page(prevPage);
       this.setState(state =>({
         page: prevPage
       }));
+      
     }
   }
   next_state(){
@@ -257,18 +280,32 @@ class Pagination extends React.Component{
     if(this.state.page == 1) return "disabled";
     return "";
   }
+  getLink(button)
+  {
+    /*//console.log(this.state.page);
+    if(button == 'next')
+    {
+      if(this.state.page < this.state.pages) return  `/gallery?page=${this.state.page + 1}`;
+      else return '';
+    }
+    if(button == 'prev'){
+      if(this.state.page > 1) return  `/gallery?page=${this.state.page - 1}`;
+      else return '';
+    }
+    return '';*/
+  }
   render(){
   return(
     <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-center">
     <li class={"page-item "+ this.prev_state()}>
-      <a class="page-link" href="#" onClick={this.page_down}>Previous</a>
+      <button class="page-link" href={this.getLink('prev')} onClick={this.page_down}>Previous</button>
     </li>
     <li className={"page-item "+ this.b_state(1) + this.b_able(1)} ><a class="page-link" href="#">{this.b_num(1)}</a></li>
     <li class={"page-item "+ this.b_state(2) + this.b_able(2)}><a class="page-link" href="#">{this.b_num(2)}</a></li>
     <li class={"page-item "+ this.b_state(3) + this.b_able(3)}><a class="page-link" href="#">{this.b_num(3)}</a></li>
     <li class={"page-item " + this.next_state()}>
-      <a class="page-link" href="#" onClick={this.page_up}>Next</a>
+      <button class="page-link" href={this.getLink('next')} onClick={this.page_up}>Next</button>
     </li>
   </ul>
 </nav>
@@ -278,22 +315,30 @@ export class Gallery extends React.Component{
   constructor(props)
   {
     super(props);
-    this.state = {c_page : 1, photos: null};
+    this.state = {c_page : parsePage(parseInt(getQueryVariable('page'))), photos: null};
+    this.setPage = this.setPage.bind(this);
+    console.log(`Current Page: ${this.state.c_page}`);
   }
   componentDidMount(page){
     const photos = [];
-    for(let i = 0; i < 10;i++)
-    {
-      photos.push(photoTemplate("https://picsum.photos/300/200"));
-    }
-    this.setState({ photos });
+    console.log("Changing photos due to current page : " + page)
+    fetch(`https://picsum.photos/v2/list?page=${page}&limit=10`).then(response => response.json()).then((response) => {
+      response.forEach(data =>
+        {
+          console.log("requesting///")
+          photos.push(photoTemplate(data.download_url))});
+        }).then(x=> this.setState({ photos }))
   }
   setPage(page)
   {
-    console.log()
+    this.componentDidMount(page);
+    this.setState(state =>({
+      c_page : page
+    }));
   }
   render()
   {
+    
     return(
       <div className="gallery" >
         <div className="g_heading">
@@ -304,7 +349,7 @@ export class Gallery extends React.Component{
           {this.state.photos}
         </div>
         <div className="g_pagination">
-          <Pagination/>
+          <Pagination change_page={this.setPage}/>
         </div>
       </div>
     )
@@ -314,6 +359,7 @@ export class Albums extends React.Component{
   constructor(props){
     super(props);
     this.state = {albums: null}
+
   }
   componentDidMount(){
     const albums = [];
