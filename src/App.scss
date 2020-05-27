@@ -182,13 +182,26 @@
                     @media screen and (max-width: 992px) {
                         padding: 0;
                     }
-                    p {
-                        width: 100%;
-                        color: white;
+                    .a_article {
+                        padding-top: 10px;
+                        font-size: 20px;
+                        font-weight: bold;
+                        text-align: center;
+                        @media screen and (max-width: 992px) {
+                            font-size: 18px;
+                        }
+                    }
+                    .a_article_description {
                         font-size: 16px;
                         @media screen and (max-width: 992px) {
-                            font-size: 14px;
+                            font-size: 20px;
                         }
+                    }
+                    width: 100%;
+                    color: white;
+                    font-size: 16px;
+                    @media screen and (max-width: 992px) {
+                        font-size: 14px;
                     }
                 }
                 img {

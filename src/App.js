@@ -418,8 +418,11 @@ class A_Item extends React.Component{
         <div className="a_info">
           <img src={this.props.album.image}></img>
           <div className="a_item_desc">
-            <p>
-              <bold>{this.props.album.name}</bold><br></br>{this.props.album.description}
+            <p  className="a_article">
+              <bold>{this.props.album.name}</bold>
+            </p>
+            <p  className="a_article_description">
+              {this.props.album.description}
             </p>
           </div>
         </div>
