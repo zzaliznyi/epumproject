@@ -110,7 +110,7 @@
         {
             "name": "Life Starts Now",
             "description": "Life Starts Now is the third studio album by Canadian rock band Three Days Grace. The album was released on September 22, 2009. The album was produced by Howard Benson. This is the second time in a row the band has worked with him, after the commercially successful One-X. Life Starts Now expresses a lighter lyrical mood compared to the band's previous album. It is the first Three Days Grace album to be released under Sony Music Entertainment and the last to be released through Jive Records, as Sony disbanded the label in 2011.",
-            "image": "https://en.wikipedia.org/wiki/File:Life_starts_now.jpg",
+            "image": "https://upload.wikimedia.org/wikipedia/en/6/68/Life_starts_now.jpg",
             "songs": [{
                     "name": "Bitter Taste",
                     "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6REZVamxtU2dLbE91dS80N0t1OUhXbHgxY0lZWFZXMVczNEVqWUE0Rk51cWdJQ2p6WDFkcDFaQXJtWTV0Zm9JWVd2UnkrY1hRYVJWaG5ubDdtRkg1VHYwQjJ5Z1IzSnAwN0hKRUsyT0k1NEZlSUFGQTFrbE5xQnMxWlJtM01ITndVPQ/"
@@ -164,7 +164,7 @@
         {
             "name": "Transit of Venus",
             "description": "Transit of Venus is the fourth studio album by Canadian rock band Three Days Grace. It was released on October 2, 2012 through RCA Records. The album is the band's first to be released under the record label, following the folding of their former label, Jive Records, in 2011.[2] The album was produced by Don Gilmore and recorded at Revolution Studios in Toronto.",
-            "image": "https://en.wikipedia.org/wiki/File:Transitofvenustdg.jpg",
+            "image": "https://upload.wikimedia.org/wikipedia/en/f/f7/Transitofvenustdg.jpg",
             "songs": [{
                     "name": "Sign of the Times",
                     "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6RGh4QmZEbENZTENhSE1xbm9mNTQ1d2lJanJ2ckhNcFZseU1oaXEzemhicitGRlh5L2xQaVBHakRqMy9Yc2FOZW1NMVFQMjk4TjE0dGdOMlFDdVlacWRESm4xQ2l5LzJOMkhiVHZrdlp3UXU4VEx4TDl4a0FCMWdVZzlJajBIUVN3PQ/"
@@ -222,7 +222,7 @@
         {
             "name": "Human",
             "description": "Human is the fifth studio album by Canadian rock band Three Days Grace. The album was released on March 31, 2015 through RCA Records. This is the group's first album without original lead singer Adam Gontier, and the first with My Darkest Days lead singer Matt Walst.[4] It debuted at No. 16 on the Billboard 200. The album cover and title may be a direct reference of the Death album of the same name.",
-            "image": "https://en.wikipedia.org/wiki/File:Three_Days_Grace_Human.jpg",
+            "image": "https://upload.wikimedia.org/wikipedia/en/1/1b/Three_Days_Grace_Human.jpg",
             "songs": [{
                     "name": "Human Race",
                     "link": "http://pod-muzyku.club/download.php?id=2597"
@@ -280,7 +280,7 @@
         {
             "name": "Outsider",
             "description": "Outsider is the sixth studio album by Canadian rock band Three Days Grace. It was released on March 9, 2018 through RCA Records. The album was produced by two of the band's prior producers, Gavin Brown and Howard Benson but also by members of the band themselves.[3] It is the second album to feature Matt Walst as lead vocalist.",
-            "image": "https://en.wikipedia.org/wiki/File:Outsider.jpg",
+            "image": "https://upload.wikimedia.org/wikipedia/en/8/8a/Outsider.jpg",
             "songs": [{
                     "name": "Right Left Wrong",
                     "link": "https://amv.ymcdn.site/a0c1d1d143ea0dc215c1a457aa8e4fd6/Pa7ODUoQqx8"
@@ -328,98 +328,6 @@
                 {
                     "name": "The Abyss",
                     "link": "https://eez.ymcdn.site/a93a835d835bef412e85564774a31d48/wTFYQbFGQYg"
-                }
-            ]
-        },
-        {
-            "name": "Three Days Grace",
-            "description": "Three Days Grace is the self-titled debut studio album by Canadian rock band Three Days Grace. It was released on July 22, 2003 through Jive Records. It was the band's only album as a trio, and also under Bertelsmann Music Group.",
-            "image": "https://upload.wikimedia.org/wikipedia/en/a/ad/ThreeDaysGrace--ThreeDaysGrace.jpg",
-            "songs": [{
-                    "name": "Burn",
-                    "link": "None"
-                },
-                {
-                    "name": "Just Like You",
-                    "link": "None"
-                },
-                {
-                    "name": "I Hate Everything About You",
-                    "link": "None"
-                },
-                {
-                    "name": "Home",
-                    "link": "None"
-                },
-                {
-                    "name": "Scared",
-                    "link": "None"
-                },
-                {
-                    "name": "Let You Down",
-                    "link": "None"
-                },
-                {
-                    "name": "Now Or Never",
-                    "link": "None"
-                },
-                {
-                    "name": "Burn",
-                    "link": "None"
-                },
-                {
-                    "name": "Burn",
-                    "link": "None"
-                },
-                {
-                    "name": "Burn",
-                    "link": "None"
-                }
-            ]
-        },
-        {
-            "name": "Three Days Grace",
-            "description": "Three Days Grace is the self-titled debut studio album by Canadian rock band Three Days Grace. It was released on July 22, 2003 through Jive Records. It was the band's only album as a trio, and also under Bertelsmann Music Group.",
-            "image": "https://upload.wikimedia.org/wikipedia/en/a/ad/ThreeDaysGrace--ThreeDaysGrace.jpg",
-            "songs": [{
-                    "name": "Burn",
-                    "link": "None"
-                },
-                {
-                    "name": "Just Like You",
-                    "link": "None"
-                },
-                {
-                    "name": "I Hate Everything About You",
-                    "link": "None"
-                },
-                {
-                    "name": "Home",
-                    "link": "None"
-                },
-                {
-                    "name": "Scared",
-                    "link": "None"
-                },
-                {
-                    "name": "Let You Down",
-                    "link": "None"
-                },
-                {
-                    "name": "Now Or Never",
-                    "link": "None"
-                },
-                {
-                    "name": "Burn",
-                    "link": "None"
-                },
-                {
-                    "name": "Burn",
-                    "link": "None"
-                },
-                {
-                    "name": "Burn",
-                    "link": "None"
                 }
             ]
         }
