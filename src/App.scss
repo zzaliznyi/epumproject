@@ -1,11 +1,12 @@
     $navbar_height: 80px;
     $m_content_padding:15%;
-    $content_width: 1000px;
+    $content_width: 85%;
     body {
         margin: 0;
         list-style: none;
         background-color: black;
         padding: 0;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     
     .navbar {
@@ -40,39 +41,44 @@
     
     .b_block {
         margin: auto;
-        width: 1000px;
+        width: $content_width;
         @media screen and (max-width: 992px) {
             width: 100%;
         }
         height: auto;
-        background-color: white;
+        background-color: black;
+        color: white;
         padding-top: 5px;
         .b_m_info {
-            padding: 10px 10px;
+            margin: auto;
+            width: 90%;
+            padding: 1%;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+            justify-content: center;
             .h_carousel {
-                width: 610px;
-                height: 300px;
+                width: $content_width/1.5;
+                height: 350px;
                 @media screen and (max-width: 992px) {
                     width: 100%;
                     height: auto;
                 }
-                margin: auto;
                 div div img {
-                    height: 300px;
+                    height: 350px;
+                    width: auto;
+                    background-color: white;
                     @media screen and (max-width: 992px) {
                         height: auto;
                     }
                 }
             }
             .b_info {
+                font-size: 25px;
                 padding-top: 10px;
-                background-color: white;
                 width: 350px;
                 margin: 0 auto;
-                text-align: center;
+                text-align: left;
             }
         }
         hr {
@@ -81,7 +87,7 @@
         .b_text {
             margin: auto;
             width: 90%;
-            padding: 3% 1%;
+            padding: 1% 1%;
         }
     }
     
@@ -146,7 +152,7 @@
             height: auto;
         }
         .a_item {
-            width: 800px;
+            width: 80%;
             height: auto;
             margin: 10px auto;
             padding: 40px;
@@ -154,24 +160,38 @@
             border: 2px solid burlywood;
             border-radius: 1%;
             @media screen and (max-width: 992px) {
-                width: 80%;
+                width: 95%;
                 height: auto;
+                padding: 5px;
             }
             .a_info {
                 display: flex;
                 flex-direction: row;
+                flex-wrap: nowrap;
                 width: 100%;
                 padding-bottom: 10px;
+                @media screen and (max-width: 992px) {
+                    flex-wrap: wrap;
+                }
                 .a_item_desc {
                     padding-left: 20px;
+                    @media screen and (max-width: 992px) {
+                        padding: 0;
+                    }
                     p {
                         width: 100%;
                         color: white;
                         font-size: 16px;
+                        @media screen and (max-width: 992px) {
+                            font-size: 14px;
+                        }
                     }
                 }
                 img {
                     width: 300px;
+                    @media screen and (max-width: 992px) {
+                        width: 100%;
+                    }
                     height: auto;
                     margin: auto;
                 }
@@ -188,5 +208,17 @@
     
     .song-table {
         background-color: black;
-        color: white;
+        color: yellow;
+    }
+    
+    .player_slot {
+        width: 40%;
+        height: auto;
+    }
+    
+    .a_name {
+        font-size: 16px;
+        @media screen and (max-width: 992px) {
+            font-size: 14px;
+        }
     }

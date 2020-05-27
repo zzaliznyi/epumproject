@@ -16,19 +16,21 @@ import {
 
 
 ReactDOM.render(
+
   <Router>
+    <Header/>
     <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/biography" >
-          <Header/>
+
           <Biography/>
         </Route>
         <Route exact path="/gallery">
-            <Header/>
+
             <Gallery/>
         </Route>
         <Route exact path="/albums">
-          <Header/>
+
           <Albums/>
         </Route>
     </Switch>

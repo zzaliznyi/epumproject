@@ -5,11 +5,39 @@ import './App.scss';
 import ImageLoader from './images';
 import { render } from '@testing-library/react';
 import { Router, Route, Switch } from "react-router";
+import database from './database.json';
+import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css';
+
+
+
+
 export class Header extends React.Component{
   constructor(props)
   {
     super(props);
     this.state = {logo: ImageLoader('logo')}
+    this.parseLocation = this.parseLocation.bind(this);
+    this.navSetup = this.navSetup.bind(this);
+  }
+  parseLocation(){
+    let location = window.location.pathname.split("/").pop();
+    console.log(location.length)
+    if(location.length == 0) location = "home";
+    return location;
+  }
+  navSetup(){
+   
+  }
+  componentDidMount(){
+    const location = this.parseLocation()
+    const items = document.getElementById('navigation').childNodes;
+    items.forEach(item => {
+      const text = item.childNodes[0].textContent.toLowerCase();
+      console.log(`Comparing "${text}" and "${this.state.location}"`);
+      if(text == location) item.setAttribute('class','nav-item active');
+      else item.setAttribute('class','nav-item');
+    });
   }
   render(){
     return (
@@ -21,15 +49,15 @@ export class Header extends React.Component{
           <span class="navbar-toggler-icon"></span>
         </button>
     <div class="collapse navbar-collapse " id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
+      <ul class="navbar-nav ml-auto" id="navigation">
+        <li class="nav-item " >
           <a class="nav-link" href="/">Home</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" >
           <a class="nav-link" href="/gallery">Gallery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/biography">Biography</a>
+          <a class="nav-link" href="/biography">Biography</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/albums">Albums</a>
@@ -77,7 +105,7 @@ export default class Home extends React.Component{
   render(){
     return(
       <div>
-      <Header/>
+
       <Slider bg_1={ImageLoader('s_bg1')} bg_2={ImageLoader('s_bg2')} bg_3={ImageLoader('s_bg3')}/>
       {About()}
       </div>
@@ -250,18 +278,15 @@ export class Gallery extends React.Component{
   constructor(props)
   {
     super(props);
-    this.state = {c_page : 1, photos: []};
-    this.loadPhotos = this.loadPhotos.bind(this);
-    this.setPage = this.setPage.bind(this);
+    this.state = {c_page : 1, photos: null};
   }
-  loadPhotos(page){
+  componentDidMount(page){
     const photos = [];
     for(let i = 0; i < 10;i++)
     {
       photos.push(photoTemplate("https://picsum.photos/300/200"));
     }
-    
-    return photos;
+    this.setState({ photos });
   }
   setPage(page)
   {
@@ -269,7 +294,6 @@ export class Gallery extends React.Component{
   }
   render()
   {
-    const photos = this.loadPhotos(1);
     return(
       <div className="gallery" >
         <div className="g_heading">
@@ -277,7 +301,7 @@ export class Gallery extends React.Component{
         </div>
         <hr></hr>
         <div className="photos">
-          {photos}
+          {this.state.photos}
         </div>
         <div className="g_pagination">
           <Pagination/>
@@ -289,12 +313,22 @@ export class Gallery extends React.Component{
 export class Albums extends React.Component{
   constructor(props){
     super(props);
+    this.state = {albums: null}
   }
+  componentDidMount(){
+    const albums = [];
+    let id = 0;
+    database.Albums.forEach(album => {
+      albums.push(<A_Item img="" id={id} key ={id} album={album}/>);
+      id++;
+    });
+    this.setState(state => ({albums : albums}));
+  }
+
   render(){
     return(
       <div className="a_container">
-        <A_Item img={ImageLoader('s_bg1')} id="1" />
-        <A_Item img={ImageLoader('s_bg1')} id="2"/>
+          {this.state.albums}
       </div>
     )
   }
@@ -302,7 +336,9 @@ export class Albums extends React.Component{
 class A_Item extends React.Component{
   constructor(props){
     super(props);
+    this.state = {songs : null};
     this.toggle = this.toggle.bind(this);
+    this.stopSong = this.stopSong.bind(this);
   }
   toggle(event){
     const element = event.target;
@@ -310,15 +346,34 @@ class A_Item extends React.Component{
     if(_state == "true") element.innerHTML = "Hide";
     else element.innerHTML = "Show";
   }
+  componentDidMount(){
+    const songs = [];
+    let song_id = 0;
+    this.props.album.songs.map((song)=>{
+        songs.push(a_item_song(song,this.props.id,song_id));
+        song_id++;
+    })
+    this.setState({songs});
+  }
+  stopSong(event){
+    const next = event.target;;
+    
+    const allAudios = document.querySelectorAll('audio');
+
+	allAudios.forEach(function(audio){
+		if(next != audio) audio.pause();
+	});
+  }
   render(){
+    
     return(
 
-      <div className="a_item">
+      <div className="a_item" onPlay={this.stopSong}>
         <div className="a_info">
-          <img src={require(`${this.props.img}`)}></img>
+          <img src={this.props.album.image}></img>
           <div className="a_item_desc">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga libero suscipit eius dignissimos modi officia reprehenderit labore! Molestias necessitatibus veritatis ex, voluptatibus ipsum, amet, voluptatum in cupiditate eaque harum veniam!
+              <bold>{this.props.album.name}</bold><br></br>{this.props.album.description}
             </p>
           </div>
         </div>
@@ -330,18 +385,8 @@ class A_Item extends React.Component{
         <div class="collapse" id={"collapse" + this.props.id}>
           <table class="table table-dark song-table">
           <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Some song Name</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
+           {this.state.songs}
+           
           </tbody>
         </table>
         </div>
@@ -349,4 +394,18 @@ class A_Item extends React.Component{
       
     )
   }
+}
+
+function a_item_song(song,id,s_id)
+{
+  return(
+          <tr>
+              <td className="a_name">{song.name}</td>
+              <td className="player_slot">
+                  <AudioPlayer id={`a_id:${id}_s${s_id}`} showJumpControls={false} layout="horizontal" preload="none" style={{
+                    width: '100%',background: "black"
+                  }} src={song.link} />
+              </td>
+            </tr>
+  )
 }

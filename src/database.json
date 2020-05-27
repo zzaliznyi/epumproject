@@ -1,0 +1,427 @@
+{
+    "Albums": [{
+            "name": "Three Days Grace",
+            "description": "Three Days Grace is the self-titled debut studio album by Canadian rock band Three Days Grace. It was released on July 22, 2003 through Jive Records. It was the band's only album as a trio, and also under Bertelsmann Music Group.",
+            "image": "https://upload.wikimedia.org/wikipedia/en/a/ad/ThreeDaysGrace--ThreeDaysGrace.jpg",
+            "songs": [{
+                    "name": "Burn",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2NE5ZM0pTOXI4Nm4wVWdEVlBzT29PUHVOdFZRU2pmK2psdWJUR2ZLaDhPZjVsZVZVZG15Mm1iVFFLWjV0MHFwZ05VNlExa0ptalRPK0IrR2tWWjR0eE5yazhKZk96ZzAvbnpCVUFVc0VLZ0tEOTVYUnI3bmc2Zy9QamdUSnpNVDJ5ZmZuSzJrQUNzMGJacnZVbzhXUmdJPQ/"
+                },
+                {
+                    "name": "Just Like You",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2NE5ZM0pTOXI4Nm4wVWdEVlBzT29PTUpwSEJmbEZwUHNtc1lTWkpMaXFIQU5CN05hc3NJU1BhR0x1REwvSXN1d2hlSGJPU2xFODN3dnlUMG80Wjh0cXIyZHoxWkJTNlFnZUtLSkR4azdZbFp2MnJDR0Y1eGJjTWhHcnRMUkFENGUvMy9CaGk4dnloYTJTZEkrNkR2Zm44PQ/"
+                },
+                {
+                    "name": "I Hate Everything About You",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2NE5ZM0pTOXI4Nm4wVWdEVlBzT29PUFlOSXJSMk92bFJVb1hacnE5L29USE5MMkVWU3pJTkVMYWZvL0Myak9LekpZdlB6WHg4bnE1VXNyZERrT3RJMGZXUm5hT1c5V1h2dXdvQS9vK0JzVElxc3V4NUNvTzE4cEsrNDNnemVXcTRVZnQ5VDhZcStjMHRWYWhCQVdNRFJNPQ/"
+                },
+                {
+                    "name": "Home",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2NE5ZM0pTOXI4Nm4wVWdEVlBzT29PTU5jSHJ5TDMraHpVancwOWRWSzZrN3htaG9PZVc0LzlGeXBMM0pvL1BoWERhOEhJMXdaVVVvMzVIc3N6Tm5IYmlEc1h3TGdNTmtnUThockF4bjVqSmNheW9YRlVZZDJSWWptWGNPNjZ3VktoK2RmZkRkRmM0MTM3ZURNaXBRK3ZnPQ/"
+                },
+                {
+                    "name": "Scared",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2NE5ZM0pTOXI4Nm4wVWdEVlBzT29PTlpSR1gzSi81YnRqTDEvaXFzZ3h4VklnbjlnaEh2dTdkTkN0M2htYVhJMUg3RzdDNWtGY29rcGVSMnhJVEl6cUNFeWRDbUVSNkFGajNscTdZZVJrR0ExL29lOFVhdXJBUThJMWJQazdoV3Jxb0NtUW11VHRSUWdJdGZ1cG5MemxJPQ/"
+                },
+                {
+                    "name": "Let You Down",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2NE5ZM0pTOXI4Nm4wVWdEVlBzT29PT0E2MGI3Sy9teEhVYis0ZDZWZk90UjE0OHJ2WW80UXo1c3BScjlCWXFyOHNZdlEvL0EwQmVmSEhmMDZNOFZNZFhCWDRBK1d2cUJxZTFYeVNNT3JDZ3pXRzlnNmV0MU1oTmhTdlowWjdJRGw3OTVNeUNIeGNNdmhiZ3l3c3VQam5VPQ/"
+                },
+                {
+                    "name": "Now Or Never",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2NE5ZM0pTOXI4Nm4wVWdEVlBzT29PTnpFd2RITk9DOCs4VUpucHNnWXhNNWdBMHhFUkpGbjN6Z0Z2NitrcnVXT3ExSTdCR2cyMHpjZ2NqaUJ1a1ZENmZGcVBiSWZXdnZlWTJWVDdscGZaWWxtNEpjRGx3S2pNRi9WZHNRd01ybGxoL21MMTZQMmVSalMwRk5CTUtKdENZPQ/"
+                },
+                {
+                    "name": "Born Like This",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2NE5ZM0pTOXI4Nm4wVWdEVlBzT29PUHFEbkpkMHdrVncvRUx4Sk5XMnJHSkhjVXIwdnZYcldGTEFRbkFZVC9QTmIzMStCcTZjaDNCYWtBMUZiejd2cElnV2dMNDZicktZMkNLSC93bWJUYm93ZWpHQmd1dnpOZ0RKNnR1b1oyT2EwVkh2UXIxOXFWdUdwaElVMGttemNjPQ/"
+                },
+                {
+                    "name": "Drown",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2NE5ZM0pTOXI4Nm4wVWdEVlBzT29PTVg5eGJyRXErTC9US2Iwa3BqRjRXSm1sVVlMbHRvYVo2emIxUTJYdEJWNTlvdnVNM2dTSkdUOFROMFRNbFVTNWk4WHhQZE53OFNlYndlSkpQT0tDOE1hQmhNeVNnV0JULzdPMGk2RVMzVXFKWkZBeUFSWWh0QnNMQkFVaVRoVlZBPQ/"
+                },
+                {
+                    "name": "Wake Up",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6QSt2ZU1CSUpBc3JrWWFvWHpxbzIzNmkrcndLZW1mVGlObDkvVkZOM1I3b0gwSGhEM2JTQmdsQ2wwRUVhV3BEbEl4azdjeUpLZGVYcnNXV0JVR1JKdEdCcTRUSWpZVzJWbjVBbW83c1RaVUIycGNSTWxzWWQwbzNUUTNNUFBGTEJrPQ/"
+                },
+                {
+                    "name": "Take Me Under",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6RGI3eXkxd3l6alN2U1c5U0FLTm1YZE5ZZHFDblU5c1BmQTU1S2F6N1hVbmcwNlRpaytzdGJEc3VKb3RQQWZyVzRpWFRvYlRMM2NjMU9MQzJIUU5ERDF4TUlVdDdaWi9ZSC9palZ1U3hIVjF5SEVPdHJ1RVVHbG9EaXpkMXE3bEFBPQ/"
+                },
+                {
+                    "name": "Overrated",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6Q0xYZ0JINEJsV3V1MWphNm0zdkEvM3BpaGdsQlFQREMvRGo1TWtjQ2dET2RDbWRndktPeTN1Q1NJR3draWg5Tk0rYW9vb2RhUlFGd0dGWGdXUW14SkpoMWtobVBtUnMrNEMyZUlWMzhMdzhid1lmVUlvRVB5M3lhWjQrVlZYOXlzPQ/"
+                }
+            ]
+        },
+        {
+            "name": "One-X",
+            "description": "One-X is the second studio album by Canadian rock band Three Days Grace. This is their first album recorded as a four-piece band, as Barry Stock joined the group and took over lead guitar from lead singer Adam Gontier.",
+            "image": "https://upload.wikimedia.org/wikipedia/en/c/cf/One_X.png",
+            "songs": [{
+                    "name": "It's All Over",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6RGRwUzFjamJ3U1RBNTZtNTdGQ05WUlh6Q3pJM3RvYTZDRVRmYkNmQUt6MFVKNVJCNmZFVjhHTWJBSmdvRkVQV1crS1NZMEduT0NzM3pBWS9nOURYaFJZK2xXdTFSWVVnNTRlckx1ZXBrVXZBRFo4Ni9DZUo4cHY5TGp4Z2NNSm5zPQ/"
+                },
+                {
+                    "name": "Pain",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6QjNXQmk2SzZ1T1RtSDhXcTBpWHhZTWIwSnRmOXc1NmJEWGxWTzQva2NLVGcxalJPTUlOVDJBS3hzYUQ1MzNzZlBVNVJaZlBseDJScExCOUhId1BMMlQySEVHamY1MmR0K1FkektBVlpaSi9tMG1MaUREQ1lWak9BekxiQklFS3VvPQ/"
+                },
+                {
+                    "name": "Animal I Have Become",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6Q3pRRkM4MDRVeWhFeitFMVh0NDZET0ZKRVV3Y3dyWlJ3VVpEV0ZHM2FwVGtoai9LNjFjZTR1RTZyRVM5SEtPcXlwMEFTZ0dndHlpaGhXanVzbDFjdkJyVHhrNERhcUtPQ1VUL3NKNk43U1FRNWJHekhhMTlOMmdpVEpKRHNTMTZZPQ/"
+                },
+                {
+                    "name": "Never Too Late",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6Q2Q2YkdkaksrR2JLK2JvQzRHS3dZaGZ6SW8zL09iVGdTN09ydnVud1pCdVJ2SXdrREp2VjJXQ3l4RUt5SkxxM2kyazkvZTVZU2lxVVIxdVBmNlZzbm5HQzQyMmUrUnhHTEhIM05HcWRQSk5NZTFPcFZKM1Z3VklJL1FMUUtVSUtnPQ/"
+                },
+                {
+                    "name": "On My Own",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6QlNudSt1bVB5RFRETHlPOXRQMGRnbmpFU21rY2xXeEExS1ZQYSt1NVd3R0VkREdBVlQwWTN2QzcreHB3YWtTdm1ON3AvbVI1WDlLWUxwMS8zTGJzZ0x5Ymt5d2JiaGZtZGh4S0p5NGlWY3ZXM0djOWhVVUgrRWk5MjNMZFJzemVBPQ/"
+                },
+                {
+                    "name": "Riot",
+                    "link": "http://mp3-top.info/download.php?id=13865"
+                },
+                {
+                    "name": "Get Out Alive",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6Qkovd3lhRUM5RjFHU3BjaE5EcktpaTJRZXB2eVBXdnQzaWt2ZitLMVYvVlc5SEFsSGt2NDJnaGkvNTlUK1RQWmhTNUcrTThqQ1pJTmcxZ090R0dnYjJiRG5iTkhoeUczZTQ1WVpQeDh1WU9BZHZYL0lPOGtIczFuK1RVcnhySWxvPQ/"
+                },
+                {
+                    "name": "Let it Die",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6QnlwL2tkaExDamxJb3ZocmNtdzM0STdFVUQwbTM1Mmk3ZnR2VHlTcHhnZlJDSVNJWWtDVW45WTBpMEdnS01JcngyNDVGUmV5MFpEUWhEeU0rd3l4ZnREQUpkNkJzcmlNcW1mTHdWV1FscWx3ZVpaN3J1Ui9IU0NDcEoxdmJCQ2lnPQ/"
+                },
+                {
+                    "name": "Over and Over",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6RDZObmdlZ3NYQ0g2b1dSa2tlVGxuV2xFZVJuNm84d01FZjE5bmtqcXlOcTZ4SUVBTkRlc2xQbXlvV2hmamNaSHhlMldjWE9KWnNwQXJFV3JSemFOdzJ2NytsU2NJcGg5ZkgvQkxyNWhVdVh6T3JwQW1LM3AyQ3kyWFVBWXhadHlNPQ/"
+                },
+                {
+                    "name": "Time of Dying",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6QlZ2WWhWT1Y3ZHFFT0xwc21tV0ZHMUFRMkdHYWpMem9ScURCQW1NUG42Z25XWVFld2Zob3FRUWhpUXhCM2RyVWU5SXZuTUZpa1JCT2NCUnZuZStHakR2UUttWFpPcGJCNmxidVNYWS85amk5cUVSdXBOM21KUlNGZFA2aWJrbXU0PQ/"
+                },
+                {
+                    "name": "Gone Forever",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6Qzl2Vi8vdFVsQVNLUGI5TUppNlV0UEtVeXlRcDlkdFd6ekVGN0lMd0tjbG4wUXJxQUVrbWhRak1mMFRkb01hS2JMZnN4azdnMnlSdzA2SWtVeG1oZzk2cUNMNmplWUJuL2RGWE1wSVpaUXVQc05mNnZqa2MxdWR6WEdsY3gwZVpjPQ/"
+                },
+                {
+                    "name": "One-X",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6Q2ZYSndJLzZyQmdKL3NnekwzS2hQQWE4UTB1S3VXWUMvTnl5ZlVVaVlIZkg2dHEwYjdYdGJ0eXE4OW9tNG84bnVaM3VLZ3JBRmJmMzVVWnBRT2hJVnpDRmFMSG1rUVhjTWgzZVhyaUM1b0prKzZHSzBkdi9pTEZQK0M0UWVNK1ZzPQ/"
+                }
+            ]
+        },
+        {
+            "name": "Life Starts Now",
+            "description": "Life Starts Now is the third studio album by Canadian rock band Three Days Grace. The album was released on September 22, 2009. The album was produced by Howard Benson. This is the second time in a row the band has worked with him, after the commercially successful One-X. Life Starts Now expresses a lighter lyrical mood compared to the band's previous album. It is the first Three Days Grace album to be released under Sony Music Entertainment and the last to be released through Jive Records, as Sony disbanded the label in 2011.",
+            "image": "https://en.wikipedia.org/wiki/File:Life_starts_now.jpg",
+            "songs": [{
+                    "name": "Bitter Taste",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6REZVamxtU2dLbE91dS80N0t1OUhXbHgxY0lZWFZXMVczNEVqWUE0Rk51cWdJQ2p6WDFkcDFaQXJtWTV0Zm9JWVd2UnkrY1hRYVJWaG5ubDdtRkg1VHYwQjJ5Z1IzSnAwN0hKRUsyT0k1NEZlSUFGQTFrbE5xQnMxWlJtM01ITndVPQ/"
+                },
+                {
+                    "name": "Break",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6QWJTQ2srMlVSby9KTG0wUEhHYm9jV1R3cStDV2tId2k2ajhJd1RDTHVVOGVyaFYyMk9HZkc1TllxNGhhQ2pXNFpiNS9aait0ZUxCSDJQakNqdzB0QmYxTTRPeE8yV3oxd3A2RkJRdGtNTXRTcTN4dmdYRGJBaGNRWWIzcng0dEZNPQ/"
+                },
+                {
+                    "name": "World So Cold",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6QjN2M1BWR1JIMGMwWVRQMmJpVERIejZmL28xbmljcTNTQmZCaU9lcXRVcDRnZllVYWNiNUtlVTlyVDV2a0NVZGh4b2dTUXM2ZGt3eTlqQUUwQ0hldlA5N1ZVMnV4NkU4aEw5SmJ0YWtIOVkxaHAyNEZhN0ExdGN1MldTbWM5ZThjPQ/"
+                },
+                {
+                    "name": "Lost in You",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6QW44dW5JN2MrUVBOM25nUDFTVWdjSDhTN24zaitpVWszSEcwY1RWY2VocnF2d0s2Wjh1VmY2eGh3TE1mTDJsd0twbTVoRUl4aGxjZ3hISGl5UGk4dTAyODc1NkwrMXUwZENPaGpjNUN6NHJYZCtjL2M1d2F5c0hKK1ZHemV3eTFFPQ/"
+                },
+                {
+                    "name": "The Good Life",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6QXpoemZiWWhLUlVVSTYrc3pXN1ZjNUgxTUlYT2NvNGcxS3NLbncxQnU4OVo3Y2NzREdmVU1pblpNR3hNZFR1bHQ2a3NMRWs1K0F1dS9jVDhrR1k5S25Gd0djLzhtMmpNR2g2cnM3bWYwYjZsQWYwTTJtYjc5Ky9DQVFMd3IwR3hRPQ/"
+                },
+                {
+                    "name": "No More",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6QXZPcW9nNU43TEErZVFDOGxoWjgvbkhKYzMxdTljN0t6c29qWDlHRlZTTG54dmFkR3NYSFBiTGd2TVRJTGlzdWtTSUNuR0hpVU5ILzl5ejNGK3pKaHQ1YkVCYmRRaEdpalg4OWRMdS95Z1F4STkxamNHMmpDSGZLdE1pMzQyalBRPQ/"
+                },
+                {
+                    "name": "Last to Know",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6QWora0l2QmE4UThoem8ySC9QMnVNc3R6aGpuSFIzZmx0UUhBMU93TVFzWW5DNTh2NnRuMlJqMEFIcGZRK3ppbkpYVjg5cmlTRjMrWnF0dG1NUyt2L1NrL1U0TEhZRlFMRnV2ZWRWUm0rVjlZL29KVGhXV0wraEhoalVlWEJYU2p3PQ/"
+                },
+                {
+                    "name": "Someone Who Cares",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6RFZRU3VZYmxiQXdocFppR0VkWjRvWkFmQkZ1L0tnS3IwczNBWlJzRURkbkJncFRnZHpPVGhKVFRPWnZvS0gvVnVIMndUNm1VZ0VuUDgrdDBxRWdBWFkwMmxNMjFXZDV0czdhUGtVUXVQcmZYRlQrRDZnUlh4VGJ2TDJXMWNtVzZnPQ/"
+                },
+                {
+                    "name": "Bully",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6QTN4b25jRUJHWnNJS2FBV1NCYVkydFI1MHVZMFVzdXhIcFBaMXJqajVFM00wRkNndk5lS3dvV050YVFSUEtURnJndC82SGp0M0xvajI2eG9udWtlTjYzZ3gwa1ZWaS93bkJTUiszbVVLVDFyZVgzWXd1U2RLeG5qUkIvS1ZNNmQwPQ/"
+                },
+                {
+                    "name": "Without You",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6RFM1NTJ5eFo2aUJuOFNXVDFaN1h1VUdZemlhSEhWZmtmQ3d6d2g5eThYdzhRempmVjNYY29BZ3lNbmcxVmF3R0dYY2oxKzFYbFRvVG56dStaODJJZEYrOSs0dTRqMWhkaGZoejJXdU84cDk2bUcwckJib1FYWXUrTlFuYmowRGhBPQ/"
+                },
+                {
+                    "name": "Goin' Down",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6Q1VLTlZtM1NLMEtORDQyYmNvU0RDNllId0lacWJHUmVZSWVlanhrVkNKc0h3NEFzQWUvNEhiTDhWV3Q0WDRSWlp5SUp4dE5ZTUdqSW52QThOaXZvR3FHbjMwWTlVRmFrdVRtR1BrRGl3bDB5cERPZW9CVm9mS0d2MlBEU3l0dk1rPQ/"
+                },
+                {
+                    "name": "Life Starts Now",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6RFh5WmY0THRNQUFqMEhXdGEzVWxnU2dRWm14cVdHUVJkTWphcnNhM3BTZ3NTUWJLR0NnY1Y3b1RmcEZSSnl1VW45d3hnWGV3NHZLOElDa0JYNDhQUnBQQS91ZDR3ekJJNWo4Q0hNUUpDRkdPWTFFaE84ak9GMzQxa2pGcStPY1hBPQ/"
+                }
+            ]
+        },
+        {
+            "name": "Transit of Venus",
+            "description": "Transit of Venus is the fourth studio album by Canadian rock band Three Days Grace. It was released on October 2, 2012 through RCA Records. The album is the band's first to be released under the record label, following the folding of their former label, Jive Records, in 2011.[2] The album was produced by Don Gilmore and recorded at Revolution Studios in Toronto.",
+            "image": "https://en.wikipedia.org/wiki/File:Transitofvenustdg.jpg",
+            "songs": [{
+                    "name": "Sign of the Times",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6RGh4QmZEbENZTENhSE1xbm9mNTQ1d2lJanJ2ckhNcFZseU1oaXEzemhicitGRlh5L2xQaVBHakRqMy9Yc2FOZW1NMVFQMjk4TjE0dGdOMlFDdVlacWRESm4xQ2l5LzJOMkhiVHZrdlp3UXU4VEx4TDl4a0FCMWdVZzlJajBIUVN3PQ/"
+                },
+                {
+                    "name": "Chalk Outline",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6QzNSQ1NENnZ6NXlaaklWQThkL2psMzB4dGpyamZ2ZEcrbE1uYTRMWnRFSUUrNURzcmlQbEIrR2Y0SXo5bVUzMDQ5b1llREs4Syt3c0NBY2xKcXBjTWE3ckp6cEtFWTlCR1BSUHJJZWI4aXJPVm0ySHNaTldIVHNQRHIvNFg2d0JBPQ/"
+                },
+                {
+                    "name": "The High Road",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6Q0pCdndqVlJudnFEQ2o2U2JnQ1dFcWFTeGtkckxoUVdJYUFSeWJoOGhoNmh5bWtWQnJoMURncklvemtMcE5TblRPZG9oYk9ZeXh4dTNkZHd2TEtEVWZBQlkrMGFaSUNEL1JaUWdlNWpoUCtwcmIrVk5lRnA0cU5LSlQ2ckJ2Q2hBPQ/"
+                },
+                {
+                    "name": "Operate",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6QVc0NWQ3djhDWHkyQTI3dFovbDg5aWhmeUdYOTU4ZzFIWlR3djFOZ2VHME9BSWlHSXJNSTVLZFEwbEpyYmc2eUFNQitydFVpaTRBMW9LeHRSRFVRcVVMTmpxYVpEYjVsS3RGYk5nMElvSEhGSE9Da291bGNYMzZEVDgvM0NIS3p3PQ/"
+                },
+                {
+                    "name": "Anonymous",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6Q0wxeWc2bGhnZUQ1OFNuRjcrbzVTam9laHlXc2tlVlZTcDR0WHEwUGRxL2tsRENXcjJselZrbG1jOWpVUFlwTlRQcHFoMEZXSjRDWWtBY2NEa0YxZkV4ajg1ejc5WkU2VWpEbkVOWXpqQnRQSnBmM0x2MTFhWlNLRnRWN3hYUW5RPQ/"
+                },
+                {
+                    "name": "Misery Loves My Company",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6Qk1FbTgxd2JOYTBlamdpNGxvNjA3aHFNbCtzYW5Db3pLd3poYk5mWnBERm1zS2hjYnNwNE9QQ0RadzYwd01laDRXNGxoQThVYnpZUDhGWUM5cEZpeGVGeTQ3Ym10S1Q0cWhRbTBlMjdrQ280TEtYN09IV0IyMG9VSkVETXhyd2hRPQ/"
+                },
+                {
+                    "name": "Give in to Me",
+                    "link": "https://2muz.me/api/track/19516413"
+                },
+                {
+                    "name": "Happiness",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6Qzdld1ozZFNSaWpjWnpaNkc4T2kzUXhyWCtJb3l0cEhONXdTZkFBQ1VIbm5DVlVjczVZcjJYbHBrWFhWSVlyUHVJZUp4Y0JEeGxnZzBDb1pqZ3dGbmlmaldQaGluS2xqTWhYbHNLenRvWmZta0xwbUc2aXpuSWR3aUZveGNBbmcwPQ/"
+                },
+                {
+                    "name": "Give Me a Reason",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6QU5VUnhpUis3d0M4cEZBUTUyeVRQNm8xbm5ScW5nMmpSQXMxTGY2dEkzWCtZcWxNYmxjQ1JRTm84Q1RmcGtWZmZHT0ZlS3c3a0ZHWVpDMWJMMWlvT3BoQkk0R1BIRjlnSmlFcHJwVk5ScUtsUnRZWGVmZjV4MjN6aC9KZ2svaUlRPQ/"
+                },
+                {
+                    "name": "Time That Remains",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6QjNZZ0srakpaZGE5VGVtNHZKenl2U2pDdlZmdlFaajNwVFlJOEc0RFZ4VjkxZ0J0bER1bVM2YUlzcW81RFNqN0hJdjdIcFo2ZEJrUjlMT3NEa1BjY1EwU3QxVU5uQWd2YktJeHk0UlJQSnZBWG1aSWxpdXU2bGQzNFRiSlBuK1NZPQ/"
+                },
+                {
+                    "name": "Expectations",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6Q3BCdUNKTTA0bFBmYUNXNGZRT2tia2lPc0VoYzMrTnI0cm5MZTZZclBCUG1ZNk5OK3BzUENoVkpiS1ppdi9CVFFubUVBS21sTGN4L3ozNlVmd3pBSGJKUmZvOVkzWUV0Uk9lTVdnc3hES2NhZ0tHOEdaMk53WVB2RFVUVlNoVXpjPQ/"
+                },
+                {
+                    "name": "Broken Glass",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6Qlcyc1Z4RG1aRDJIcmZ5UG1vZEU0RXA5WGVhVEZHMVV3QzRDdGZJK0M2a1lnVUtrL0N2SnZsVUlJTm01cDVIekFRUHMySzEvc1htRHRyZytod3RGaTJ5WnlHbFlrWU5rNkI0a3luSjFwUXViN3l4WmFwcUhubEVDRVV6V2R0UlhNPQ/"
+                },
+                {
+                    "name": "Unbreakable Heart",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6RGxoZkYxYmNnSWZlNzRQYzJTYXFLNmFPZzRtL09hUmVSNk1XRDJCRnFQSEIxVC9ta1d0alZJc1dHbUdnOEIwMTIxZnhVeVBlYUtPdWpTU1lyWFAxTVB0MUN4NXFSQ2YxVFV3cnExSExNNHdYczJsL3VXbVVHZ0VTeExpTi85VTlBPQ/"
+                }
+            ]
+        },
+        {
+            "name": "Human",
+            "description": "Human is the fifth studio album by Canadian rock band Three Days Grace. The album was released on March 31, 2015 through RCA Records. This is the group's first album without original lead singer Adam Gontier, and the first with My Darkest Days lead singer Matt Walst.[4] It debuted at No. 16 on the Billboard 200. The album cover and title may be a direct reference of the Death album of the same name.",
+            "image": "https://en.wikipedia.org/wiki/File:Three_Days_Grace_Human.jpg",
+            "songs": [{
+                    "name": "Human Race",
+                    "link": "http://pod-muzyku.club/download.php?id=2597"
+                },
+                {
+                    "name": "Painkiller",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6RHN6WXk2N25aY1RReDFrR1pxRCs3S1F0dzRlS09Vd2U5cVBlOGtVeXZWZ0NYU0plQ2JHTFQxOTdNRmEydEpxNUZ2cDFjYUNzY2MrVTdkMmtlV0QyVUNRZllJVXlZdFEyZmx0UnBKQmZNY3F3UUxuUEtLVVRTWXJVZTVvNGcwWE5VPQ/"
+                },
+                {
+                    "name": "Fallen Angel",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6RDdvM29ZWEh3c3FBNTJGZWRhN3I3YWxUQ0llMlpWaS9rNDhVQ3NQZGVvTHF1NXAvSEU2N3NQRkRac3pScUhIQmZrMkwybUFCSThwWkZhQzBIVnZRbm5FMmtWeU5aM1ErSEcwSUErQ1RZZUZENXdncmgyUmJKclZVbDFmeDVZbjVZPQ/"
+                },
+                {
+                    "name": "Landmine",
+                    "link": "http://pod-muzyku.club/download.php?id=30829"
+                },
+                {
+                    "name": "Tell Me Why",
+                    "link": "http://pod-muzyku.club/download.php?id=7517"
+                },
+                {
+                    "name": "I Am Machine",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6QVNxSzZ6RnpIalFZdW5BODNwQks2V0dhY1RKVEhBazZXczBmdG5PSGNOOW9ueVp1dGdhalZleldYa1N4QUlpaW9tWGZCZnFXUkQzaXdLclliK1lVNUluNUVNVTM4RGlnZHZtclA2ektwVXBtc0dQZStvcmJ1bTYxOFBJOW5SZWlRPQ/"
+                },
+                {
+                    "name": "So What",
+                    "link": "https://quq.ymcdn.site/b6a07b7a05bb635e32b0d46d862e47a0/0eA35x3zxgY"
+                },
+                {
+                    "name": "Car Crash",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6Q0NGeFo0Z3VPbG9ka0ZpbUN5TXFGbGFwSTdla3pIa1IwRlpxUXJyVHZlUGxOaWhNcU1WM3Q5VHAweklodW1VcUtXaWhyZnRTVTV3eTFERGl0Q0VjOEF0MzNuYTdpWXZJOThISVBMUit3bWpYMzJyT0trczM3Sm5jMnRSazQvMzlZPQ/"
+                },
+                {
+                    "name": "Nothing's Fair in Love and War",
+                    "link": "https://kkr.ymcdn.site/ae39cb4632e461e23c8f767384b4eb0a/jNgq1s7Z1w4"
+                },
+                {
+                    "name": "One Too Many",
+                    "link": "https://kkr.ymcdn.site/641b01dc3c971a8c82d60f0c3b9332a0/9_aqAbN-1ck"
+                },
+                {
+                    "name": "The End Is Not the Answer",
+                    "link": "https://ebr.ymcdn.site/8b96934b0049799f0ea4655add52e62d/6gUcNoC_EAA"
+                },
+                {
+                    "name": "The Real You",
+                    "link": "https://iir.ymcdn.site/a97af2dce3a6d102cec303c0b3606943/qI_TvHh0xSc"
+                },
+                {
+                    "name": "Every Other Weekend",
+                    "link": "https://slivkimp3.biz/download/download/YVgrY1U3OUN0Zm83VW8rQzlVNGM2L2Q1cFVudGJ0b2NVbXMxcWdNWFd6RFBoUWpzVmRqMWx0Z2ZXQUswbXQvaktYWmR2SDJZaE92cHJsMnpaOFNwd1ZaZjVnRm5WTnRSQUhNam05YlEzSDV5WS9uZXA3TmNJK1lBYXBFdXFSS1lQUzJsS0NoUStsQm04azAxTVhFSDJORHVOblI1NjNaRG5IM2V6cDQ2RG5nPQ/"
+                }
+            ]
+        },
+        {
+            "name": "Outsider",
+            "description": "Outsider is the sixth studio album by Canadian rock band Three Days Grace. It was released on March 9, 2018 through RCA Records. The album was produced by two of the band's prior producers, Gavin Brown and Howard Benson but also by members of the band themselves.[3] It is the second album to feature Matt Walst as lead vocalist.",
+            "image": "https://en.wikipedia.org/wiki/File:Outsider.jpg",
+            "songs": [{
+                    "name": "Right Left Wrong",
+                    "link": "https://amv.ymcdn.site/a0c1d1d143ea0dc215c1a457aa8e4fd6/Pa7ODUoQqx8"
+                },
+                {
+                    "name": "The Mountain",
+                    "link": "https://aol.ymcdn.site/2b21cdfc00546675a7e955f70ff09317/pho91OkuIIo"
+                },
+                {
+                    "name": "I Am an Outsider",
+                    "link": "https://tzg.ymcdn.site/a737538eac22f8026bcb5cc71475dce5/EYspF1qHhEI"
+                },
+                {
+                    "name": "Infra-Red",
+                    "link": "https://cxq.ymcdn.site/37073bfff0fadb555220c5066a43eddd/Z6S4nO5xbTM"
+                },
+                {
+                    "name": "Nothing to Lose but You",
+                    "link": "https://heh.ymcdn.site/2df5557168b131cbe227724bfd6945e4/dd5W_eknpa8"
+                },
+                {
+                    "name": "Me Against You",
+                    "link": "https://hrh.ymcdn.site/b2b63d14480c5b1f1e192a3c6e4c9107/QlL7ZPcbtgI"
+                },
+                {
+                    "name": "Love Me or Leave Me",
+                    "link": "https://ado.ymcdn.site/e53e81725e977032d7b547af8c21b684/AHeGDYBHHfk"
+                },
+                {
+                    "name": "Strange Days",
+                    "link": "https://eez.ymcdn.site/244dac43d917c53e4bc51529e8bae175/FMfboNTd_JA"
+                },
+                {
+                    "name": "Villain I'm Not",
+                    "link": "https://ghn.ymcdn.site/0dffc02f398302465635d8bf4bc3ed84/YOnc3_ZABOM"
+                },
+                {
+                    "name": "Chasing the First Time",
+                    "link": "https://quq.ymcdn.site/ce76b68771e0affe99543ca9cf748771/Kt6llBGD4k8"
+                },
+                {
+                    "name": "The New Real",
+                    "link": "https://typ.ymcdn.site/7ad14687af9ddf5f8721bda0799acb21/tbaZcPLvsTo"
+                },
+                {
+                    "name": "The Abyss",
+                    "link": "https://eez.ymcdn.site/a93a835d835bef412e85564774a31d48/wTFYQbFGQYg"
+                }
+            ]
+        },
+        {
+            "name": "Three Days Grace",
+            "description": "Three Days Grace is the self-titled debut studio album by Canadian rock band Three Days Grace. It was released on July 22, 2003 through Jive Records. It was the band's only album as a trio, and also under Bertelsmann Music Group.",
+            "image": "https://upload.wikimedia.org/wikipedia/en/a/ad/ThreeDaysGrace--ThreeDaysGrace.jpg",
+            "songs": [{
+                    "name": "Burn",
+                    "link": "None"
+                },
+                {
+                    "name": "Just Like You",
+                    "link": "None"
+                },
+                {
+                    "name": "I Hate Everything About You",
+                    "link": "None"
+                },
+                {
+                    "name": "Home",
+                    "link": "None"
+                },
+                {
+                    "name": "Scared",
+                    "link": "None"
+                },
+                {
+                    "name": "Let You Down",
+                    "link": "None"
+                },
+                {
+                    "name": "Now Or Never",
+                    "link": "None"
+                },
+                {
+                    "name": "Burn",
+                    "link": "None"
+                },
+                {
+                    "name": "Burn",
+                    "link": "None"
+                },
+                {
+                    "name": "Burn",
+                    "link": "None"
+                }
+            ]
+        },
+        {
+            "name": "Three Days Grace",
+            "description": "Three Days Grace is the self-titled debut studio album by Canadian rock band Three Days Grace. It was released on July 22, 2003 through Jive Records. It was the band's only album as a trio, and also under Bertelsmann Music Group.",
+            "image": "https://upload.wikimedia.org/wikipedia/en/a/ad/ThreeDaysGrace--ThreeDaysGrace.jpg",
+            "songs": [{
+                    "name": "Burn",
+                    "link": "None"
+                },
+                {
+                    "name": "Just Like You",
+                    "link": "None"
+                },
+                {
+                    "name": "I Hate Everything About You",
+                    "link": "None"
+                },
+                {
+                    "name": "Home",
+                    "link": "None"
+                },
+                {
+                    "name": "Scared",
+                    "link": "None"
+                },
+                {
+                    "name": "Let You Down",
+                    "link": "None"
+                },
+                {
+                    "name": "Now Or Never",
+                    "link": "None"
+                },
+                {
+                    "name": "Burn",
+                    "link": "None"
+                },
+                {
+                    "name": "Burn",
+                    "link": "None"
+                },
+                {
+                    "name": "Burn",
+                    "link": "None"
+                }
+            ]
+        }
+    ]
+}
