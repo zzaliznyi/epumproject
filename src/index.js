@@ -5,7 +5,9 @@ import {Biography} from './App';
 import {Header} from './App';
 import {Gallery} from './App';
 import {Albums} from './App'
+import {Footer} from './App'
 import Home from "./App";
+import Contacts from "./Contacts";
 import * as serviceWorker from './serviceWorker';
 import {
   BrowserRouter as Router,
@@ -33,7 +35,11 @@ ReactDOM.render(
 
           <Albums/>
         </Route>
+        <Route exact path="/contacts">
+            <Contacts/>
+        </Route>
     </Switch>
+    <Footer/>
 </Router>,
   document.getElementById('root')
 );

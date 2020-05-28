@@ -50,7 +50,7 @@ export class Header extends React.Component{
   }
   render(){
     return (
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <a class="navbar-brand" href="#">
           <img src={require(`${this.state.logo}`)} alt="" loading="lazy"></img>
         </a>
@@ -448,7 +448,7 @@ class A_Item extends React.Component{
 function a_item_song(song,id,s_id)
 {
   return(
-          <tr>
+          <tr class="song_tr">
               <td className="a_name">{song.name}</td>
               <td className="player_slot">
                   <AudioPlayer id={`a_id:${id}_s${s_id}`} showJumpControls={false} layout="horizontal" preload="none" style={{
@@ -457,4 +457,17 @@ function a_item_song(song,id,s_id)
               </td>
             </tr>
   )
+}
+
+export class Footer extends React.Component{
+  render(){
+    return(
+          <footer class="page-footer font-small blue">
+          <hr className="f_hr"></hr>
+          <div class="footer-copyright text-center py-3">© 2020 Copyright:
+            <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+          </div>
+          </footer>
+    )
+  }
 }

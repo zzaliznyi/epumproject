@@ -112,11 +112,11 @@
             flex-direction: row;
             justify-content: center;
             .g_photo {
-                width: auto;
-                height: 300px;
+                width: 45%;
+                height: auto;
                 img {
-                    max-height: 300px;
-                    width: auto;
+                    width: 100%;
+                    height: auto;
                 }
                 margin: 5px;
                 justify-content: center;
@@ -237,5 +237,55 @@
         font-size: 16px;
         @media screen and (max-width: 992px) {
             font-size: 14px;
+        }
+    }
+    
+    .song_tr:hover {
+        background: rgb(180, 3, 3);
+        background: linear-gradient(90deg, rgba(113, 0, 0, 1) 14%, rgba(0, 0, 0, 1) 61%);
+    }
+    
+    .footer_text_container {
+        color: white;
+    }
+    
+    .f_hr {
+        background-color: white;
+    }
+    
+    .c_hr {
+        background-color: grey;
+    }
+    
+    .contacts_container {
+        width: $content_width;
+        height: $content_width;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 40px auto;
+        color: black;
+        background-color: white;
+        border: 1px solid white;
+        border-radius: 5px;
+        padding: 20px;
+        .contacts_row {
+            width: 49%;
+            @media screen and (max-width: 992px) {
+                width: 100%;
+                height: auto;
+            }
+            margin: auto;
+            padding-top: 20px;
+        }
+        .contacts_map {
+            width: 100%;
+            .google-map {
+                width: 100%;
+                iframe {
+                    width: 100%;
+                }
+            }
         }
     }
