@@ -16,7 +16,14 @@ class Contacts extends React.Component{
                     <hr className="c_hr"></hr>
                     <Contacts_Form/>
                     <div className="contacts_row">
-                        <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quaerat perspiciatis iure doloribus impedit cupiditate! Esse tempore, ad nihil dolorum alias dolor praesentium distinctio corporis modi tempora laborum mollitia delectus.</h5>
+                        <div className="c_address">
+                            <h2>Our address :</h2>
+                            <hr className="f_hr"></hr>
+                            <div className = "c_a_block">
+                                <img  className="contacts_label" src='./images/adress_k.png'></img>
+                                
+                            </div>
+                        </div>
                     </div>
                 </div>
 

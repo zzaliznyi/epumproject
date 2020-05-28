@@ -8,6 +8,7 @@ import { Router, Route, Switch } from "react-router";
 import database from './database.json';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
+import getImgBytTitle from './images';
 
 
 function getQueryVariable(variable) {
@@ -50,7 +51,7 @@ export class Header extends React.Component{
   }
   render(){
     return (
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <nav class="navbar navbar-expand-lg navbar-dark  sticky-top">
         <a class="navbar-brand" href="#">
           <img src={require(`${this.state.logo}`)} alt="" loading="lazy"></img>
         </a>
@@ -104,21 +105,69 @@ class Slider extends React.Component{
     )
   }
 }
-function About()
-{
-  return (
-    <div className="about_block"></div>
-  )
-}
 export default class Home extends React.Component{
   render(){
     return(
       <div>
 
-      <Slider bg_1={ImageLoader('s_bg1')} bg_2={ImageLoader('s_bg2')} bg_3={ImageLoader('s_bg3')}/>
-      {About()}
+      <Slider bg_1={ImageLoader('s_bg1')} bg_2={ImageLoader('w1')} bg_3={ImageLoader('w2')}/>
+      <div className="y_video_container">
+      <iframe className="y_video" src="https://www.youtube.com/embed/9R2OGKTOd0k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <W_new/>
       </div>
 
+    )
+  }
+}
+class W_photo extends React.Component{
+  constructor(props)
+  {
+    super(props);
+  }
+  render()
+  {
+    return(
+      <img src={require(`${this.props.link}`)}></img>
+    )
+  }
+}
+class W_new extends React.Component{
+  constructor(props)
+  {
+    super(props);
+    this.state = {data : null ,f_h : 0};
+    this.getHeight = this.getHeight.bind(this);
+  }
+  componentDidMount(){
+    const images = [];
+    for(let i = 0; i < 8;i++)
+    {
+     images.push(<W_photo link={ImageLoader(`w${i+1}`)}/>);
+    }
+    this.setState(state => ({
+      data: images
+    }));
+    this.getHeight();
+  }
+  getHeight(){
+    const sib_height = document.getElementsByClassName('w_new_photos')[0];
+    const height = sib_height.offsetHeight;
+    console.log(height);
+  }
+ 
+  render(){
+    return(
+      <div className="w_new_container">
+        <h2 className="w_new_heading">WHAT`S NEW?</h2>
+        <div className="w_new_content">
+          <div className="w_new_photos">
+              {this.state.data}
+          </div>
+          <div className="facebook_integrity">
+          <div class="fb-page" data-href="https://www.facebook.com/threedaysgrace" data-tabs="timeline" data-width="400px" data-height="1400px" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/threedaysgrace" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/threedaysgrace">Three Days Grace</a></blockquote></div></div>
+        </div>
+      </div>
     )
   }
 }
@@ -131,10 +180,11 @@ export class Biography extends React.Component{
             <Slider bg_1={ImageLoader('b_p1')} bg_2={ImageLoader('b_p2')} bg_3={ImageLoader('b_p3')}/>
             <div className="b_info">
               <h1>Three Days Grace</h1>
+              <hr className="f_hr"></hr>
               <p> <strong>Genres :</strong>Post-grunge/hard rock/alternative metal/alternative rock/nu metal</p>
             </div>
           </div>
-          <hr></hr>
+          <hr className="f_hr"></hr>
           <div className="b_text">
           Three Days Grace is a Canadian rock band formed in Norwood, Ontario in 1997. Based in Toronto, the band's original line-up consisted of guitarist and lead vocalist Adam Gontier, drummer and backing vocalist Neil Sanderson, and bassist Brad Walst. In 2003, Barry Stock was recruited as the band's lead guitarist, making them a four-member band.<br></br> In 2013, Gontier left the band and was replaced by My Darkest Days' vocalist Matt Walst, who is also the younger brother of bassist Brad Walst.<br></br>
 
@@ -462,7 +512,7 @@ function a_item_song(song,id,s_id)
 export class Footer extends React.Component{
   render(){
     return(
-          <footer class="page-footer font-small blue">
+          <footer class="page-footer font-small black">
           <hr className="f_hr"></hr>
           <div class="footer-copyright text-center py-3">© 2020 Copyright:
             <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
