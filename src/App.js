@@ -45,6 +45,7 @@ export class Header extends React.Component{
   }
   componentDidMount(){
     this.setPosition();
+    window.scrollTo(0, 0);
   }
   setPosition(){
     const location = this.parseLocation()
@@ -54,6 +55,7 @@ export class Header extends React.Component{
       //console.log(`Comparing "${text}" and "${this.state.location}"`);
       if(text == location) item.setAttribute('class','nav-item active');
       else item.setAttribute('class','nav-item');
+      window.scrollTo(0, 0);
     });
   }
   render(){
@@ -81,6 +83,12 @@ export class Header extends React.Component{
         </li>
         <li class="nav-item">
         <Link to="/contacts" className="nav-link">Contacts</Link>
+        </li>
+        <li class="nav-item">
+        <Link to="/tours" className="nav-link">Tours</Link>
+        </li>
+        <li class="nav-item">
+        <Link to="/shop" className="nav-link">Shop</Link>
         </li>
       </ul>
     </div>
@@ -122,6 +130,7 @@ export default class Home extends React.Component{
       <iframe className="y_video" src="https://www.youtube.com/embed/9R2OGKTOd0k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <W_new/>
+      <Tour_Main/>
       </div>
 
     )
@@ -233,6 +242,31 @@ class W_new extends React.Component{
           </div>
         </div>
       </div>
+    )
+  }
+}
+class Tour_Main extends React.Component{
+  constructor(props)
+  {
+    super(props);
+    this.state = {a_cover : getImgByTitle('Outsider cover'),a_heading: getImgByTitle('Outsider heading')};
+  }
+  render(){
+    return(
+      <article className="check_tour">
+          
+          <div className="c_t_description text-center">
+          <div className="c_t_heading">
+              <img src={require(`${this.state.a_heading}`)}></img>
+          </div>
+            <h1>Check the tour table!</h1>
+            <button type="button" class="btn c_t_button btn-lg ">CHECK OUT</button>
+          </div>
+          <div className="c_t_i_container">
+          <img src={require(`${this.state.a_cover}`)}></img>
+          </div>
+          
+      </article>
     )
   }
 }

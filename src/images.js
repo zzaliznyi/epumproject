@@ -13,7 +13,9 @@ const images = [
     { id: 12, src: './images/w5.jpeg', title: 'w5' },
     { id: 13, src: './images/w6.jpg', title: 'w6' },
     { id: 14, src: './images/w7.jpg', title: 'w7' },
-    { id: 15, src: './images/w8.jpg', title: 'w8' }
+    { id: 15, src: './images/w8.jpg', title: 'w8' },
+    { id: 16, src: './images/outsider.jpeg', title: 'Outsider cover' },
+    { id: 17, src: './images/Outsider_text.svg', title: 'Outsider heading' }
 ];
 
 export function getImgByTitle(title) {
