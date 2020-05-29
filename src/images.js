@@ -16,11 +16,21 @@ const images = [
     { id: 15, src: './images/w8.jpg', title: 'w8' }
 ];
 
-function getImgBytTitle(title) {
+export function getImgByTitle(title) {
     let _image = undefined;
     images.forEach(image => {
         if (title == image.title) _image = image.src;
     });
     return _image;
 }
-export default getImgBytTitle;
+
+export function getImgById(id) {
+    const found = images.find(element => element.id == id);
+    if (found) return found.src;
+    else return undefined;
+}
+export function getPages(pagination) {
+    const pages = Math.ceil(images.length / pagination);
+    console.log(`Pages : ${pages}`);
+    return pages;
+}

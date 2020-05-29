@@ -2,9 +2,12 @@ import React from 'react';
 import logo from './images/logo.png'
 import $ from 'jquery'
 import './App.scss';
-import ImageLoader from './images';
+import {getImgByTitle} from './images';
+import{getImgById} from "./images";
+import{getPages} from "./images";
 import { render } from '@testing-library/react';
 import { Router, Route, Switch } from "react-router";
+import {Link} from 'react-router-dom';
 import database from './database.json';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
@@ -26,9 +29,10 @@ export class Header extends React.Component{
   constructor(props)
   {
     super(props);
-    this.state = {logo: ImageLoader('logo')}
+    this.state = {logo: getImgByTitle('logo')}
     this.parseLocation = this.parseLocation.bind(this);
     this.navSetup = this.navSetup.bind(this);
+    this.setPosition = this.setPosition.bind(this);
   }
   parseLocation(){
     let location = window.location.pathname.split("/").pop();
@@ -37,9 +41,12 @@ export class Header extends React.Component{
     return location;
   }
   navSetup(){
-   
+    
   }
   componentDidMount(){
+    this.setPosition();
+  }
+  setPosition(){
     const location = this.parseLocation()
     const items = document.getElementById('navigation').childNodes;
     items.forEach(item => {
@@ -59,21 +66,21 @@ export class Header extends React.Component{
           <span class="navbar-toggler-icon"></span>
         </button>
     <div class="collapse navbar-collapse " id="navbarResponsive">
-      <ul class="navbar-nav ml-auto" id="navigation">
+      <ul class="navbar-nav ml-auto" id="navigation" onClick={this.setPosition}>
         <li class="nav-item " >
-          <a class="nav-link" href="/">Home</a>
+          <Link to="/" className="nav-link">Home</Link>
         </li>
         <li class="nav-item" >
-          <a class="nav-link" href="/gallery">Gallery</a>
+          <Link to="/gallery" className="nav-link">Gallery</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/biography">Biography</a>
+        <Link to="/albums" className="nav-link">Albums</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/albums">Albums</a>
+        <Link to="/biography" className="nav-link">Biography</Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Order Us</a>
+        <Link to="/contacts" className="nav-link">Contacts</Link>
         </li>
       </ul>
     </div>
@@ -110,7 +117,7 @@ export default class Home extends React.Component{
     return(
       <div>
 
-      <Slider bg_1={ImageLoader('s_bg1')} bg_2={ImageLoader('w1')} bg_3={ImageLoader('w2')}/>
+      <Slider bg_1={getImgByTitle('s_bg1')} bg_2={getImgByTitle('w1')} bg_3={getImgByTitle('w2')}/>
       <div className="y_video_container">
       <iframe className="y_video" src="https://www.youtube.com/embed/9R2OGKTOd0k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
@@ -137,24 +144,21 @@ class W_new extends React.Component{
   {
     super(props);
     this.state = {data : null ,f_h : 0};
-    this.getHeight = this.getHeight.bind(this);
+
   }
   componentDidMount(){
     const images = [];
     for(let i = 0; i < 8;i++)
     {
-     images.push(<W_photo link={ImageLoader(`w${i+1}`)}/>);
+     images.push(<W_photo link={getImgByTitle(`w${i+1}`)}/>);
     }
     this.setState(state => ({
       data: images
     }));
-    this.getHeight();
+   
   }
-  getHeight(){
-    const sib_height = document.getElementsByClassName('w_new_photos')[0];
-    const height = sib_height.offsetHeight;
-    console.log(height);
-  }
+
+
  
   render(){
     return(
@@ -164,8 +168,69 @@ class W_new extends React.Component{
           <div className="w_new_photos">
               {this.state.data}
           </div>
-          <div className="facebook_integrity">
-          <div class="fb-page" data-href="https://www.facebook.com/threedaysgrace" data-tabs="timeline" data-width="400px" data-height="1400px" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/threedaysgrace" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/threedaysgrace">Three Days Grace</a></blockquote></div></div>
+          <div className="w_new_articles">
+              <article className= "w_article">
+                <img className="w_article_logo" src="https://i.pinimg.com/originals/7f/d3/38/7fd33802d65f0299fbd13045c71c76fc.png"></img>
+                <div className="w_article_text">
+                  <p className="wam_text">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis ullam quasi ad officia similique asperiores laborum? Fuga, voluptatem sequi ipsa tenetur, quisquam vitae ipsum adipisci enim, totam unde sint repellendus?
+                  </p>
+                  <p className="wam_date">
+                    March,21,2015 4:52PM
+                  </p>
+                </div>
+              </article>
+              <hr className="f_hr"></hr>
+              <article className= "w_article">
+                <img className="w_article_logo" src="https://i.pinimg.com/originals/7f/d3/38/7fd33802d65f0299fbd13045c71c76fc.png"></img>
+                <div className="w_article_text">
+                  <p className="wam_text">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis ullam quasi ad officia similique asperiores laborum? Fuga, voluptatem sequi ipsa tenetur, quisquam vitae ipsum adipisci enim, totam unde sint repellendus?
+                  </p>
+                  <p className="wam_date">
+                    March,21,2015 4:52PM
+                  </p>
+                </div>
+              </article>
+              <hr className="f_hr"></hr>
+              <article className= "w_article">
+                <img className="w_article_logo" src="https://i.pinimg.com/originals/7f/d3/38/7fd33802d65f0299fbd13045c71c76fc.png"></img>
+                <div className="w_article_text">
+                  <p className="wam_text">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis ullam quasi ad officia similique asperiores laborum? Fuga, voluptatem sequi ipsa tenetur, quisquam vitae ipsum adipisci enim, totam unde sint repellendus?
+                  </p>
+                  <p className="wam_date">
+                    March,21,2015 4:52PM
+                  </p>
+                </div>
+              </article>
+              <hr className="f_hr"></hr>
+              <article className= "w_article">
+                <img className="w_article_logo" src="https://i.pinimg.com/originals/7f/d3/38/7fd33802d65f0299fbd13045c71c76fc.png"></img>
+                <div className="w_article_text">
+                  <p className="wam_text">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis ullam quasi ad officia similique asperiores laborum? Fuga, voluptatem sequi ipsa tenetur, quisquam vitae ipsum adipisci enim, totam unde sint repellendus?
+                  </p>
+                  <p className="wam_date">
+                    March,21,2015 4:52PM
+                  </p>
+                </div>
+              </article>
+              <hr className="f_hr"></hr>
+              <article className= "w_article">
+                <img className="w_article_logo" src="https://i.pinimg.com/originals/7f/d3/38/7fd33802d65f0299fbd13045c71c76fc.png"></img>
+                <div className="w_article_text">
+                  <p className="wam_text">
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis ullam quasi ad officia similique asperiores laborum? Fuga, voluptatem sequi ipsa tenetur, quisquam vitae ipsum adipisci enim, totam unde sint repellendus?
+                  </p>
+                  <p className="wam_date">
+                    March,21,2015 4:52PM
+                  </p>
+                </div>
+              </article>
+              <hr className="f_hr"></hr>
+              
+          </div>
         </div>
       </div>
     )
@@ -177,7 +242,7 @@ export class Biography extends React.Component{
     return (
       <main className="b_block">
           <div className="b_m_info">
-            <Slider bg_1={ImageLoader('b_p1')} bg_2={ImageLoader('b_p2')} bg_3={ImageLoader('b_p3')}/>
+            <Slider bg_1={getImgByTitle('b_p1')} bg_2={getImgByTitle('b_p2')} bg_3={getImgByTitle('b_p3')}/>
             <div className="b_info">
               <h1>Three Days Grace</h1>
               <hr className="f_hr"></hr>
@@ -215,7 +280,7 @@ function photoTemplate(src)
 {
   return(
     <div className="g_photo">
-        <img src={src} alt="Gallery Photo"></img>
+        <img src={require(`${src}`)} alt="Gallery Photo"></img>
     </div>
   )
 }
@@ -230,7 +295,7 @@ function parsePage(page,pages){
 class Pagination extends React.Component{
   constructor(props){
     super(props);
-    this.state = {page : parsePage(parseInt(getQueryVariable('page'))) ,pages: 10};
+    this.state = {page : parsePage(parseInt(getQueryVariable('page'))) ,pages: getPages(10)};
     this.b_state = this.b_state.bind(this);
     this.b_num = this.b_num.bind(this);
     this.page_up = this.page_up.bind(this);
@@ -353,7 +418,9 @@ class Pagination extends React.Component{
     </li>
     <li className={"page-item "+ this.b_state(1) + this.b_able(1)} ><a class="page-link" href="#">{this.b_num(1)}</a></li>
     <li class={"page-item "+ this.b_state(2) + this.b_able(2)}><a class="page-link" href="#">{this.b_num(2)}</a></li>
-    <li class={"page-item "+ this.b_state(3) + this.b_able(3)}><a class="page-link" href="#">{this.b_num(3)}</a></li>
+    {() =>{
+      if(this.state.pages!=2) return     <li class={"page-item "+ this.b_state(3) + this.b_able(3)}><a class="page-link" href="#">{this.b_num(3)}</a></li>;
+    }}
     <li class={"page-item " + this.next_state()}>
       <button class="page-link" href={this.getLink('next')} onClick={this.page_up}>Next</button>
     </li>
@@ -371,13 +438,17 @@ export class Gallery extends React.Component{
   }
   componentDidMount(page){
     const photos = [];
+    if(!page) page = 1;
     console.log("Changing photos due to current page : " + page)
-    fetch(`https://picsum.photos/v2/list?page=${page}&limit=10`).then(response => response.json()).then((response) => {
-      response.forEach(data =>
-        {
-          console.log("requesting///")
-          photos.push(photoTemplate(data.download_url))});
-        }).then(x=> this.setState({ photos }))
+    for(let i = 0 + 10*(page-1); i < page*10;i++)
+    {
+      const imgLink = getImgById(i+1);
+      console.log(`Image: ${imgLink}`);
+      if(imgLink) photos.push(photoTemplate(imgLink));
+      else break;
+    }
+    console.log(`Setting photos due to array: ${photos}`)
+    this.setState({photos});
   }
   setPage(page)
   {
@@ -423,8 +494,15 @@ export class Albums extends React.Component{
 
   render(){
     return(
+      <div className="albums_data">
+      <div className="a_header">
+        <p>DISCOGRAPHY</p>
+      </div>
       <div className="a_container">
+          <div className="a_heading"></div>
           {this.state.albums}
+      </div>
+      
       </div>
     )
   }
@@ -446,7 +524,7 @@ class A_Item extends React.Component{
     const songs = [];
     let song_id = 0;
     this.props.album.songs.map((song)=>{
-        songs.push(a_item_song(song,this.props.id,song_id));
+        songs.push(<A_song song = {song} id={this.props.id} s_id = {song_id}/>);
         song_id++;
     })
     this.setState({songs});
@@ -489,24 +567,37 @@ class A_Item extends React.Component{
           </tbody>
         </table>
         </div>
+        <hr className="c_hr"></hr>
       </div>
       
     )
   }
 }
 
-function a_item_song(song,id,s_id)
+class A_song extends React.Component
 {
+  constructor(props)
+  {
+    super(props);
+    this.state = {player : null}
+  }
+  componentDidMount()
+  {
+    const player = <AudioPlayer id={`a_id:${this.props.id}_s${this.props.s_id}`} showJumpControls={false} layout="horizontal" preload="none" style={{
+      width: '100%',background: "black"
+    }} src={this.props.song.link} />;
+    this.setState({player});
+  }
+  render(){
   return(
           <tr class="song_tr">
-              <td className="a_name">{song.name}</td>
+              <td className="a_name">{this.props.song.name}</td>
               <td className="player_slot">
-                  <AudioPlayer id={`a_id:${id}_s${s_id}`} showJumpControls={false} layout="horizontal" preload="none" style={{
-                    width: '100%',background: "black"
-                  }} src={song.link} />
+                  {this.state.player}
               </td>
             </tr>
   )
+                }
 }
 
 export class Footer extends React.Component{
