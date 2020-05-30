@@ -331,5 +331,49 @@
                 }
             ]
         }
+    ],
+    "Shop": [{
+            "article": "NEW 2019 TOUR OUTSIDER BANDANA",
+            "image": "https://cdn.shopify.com/s/files/1/0139/0080/8246/t/2/assets/7750.jpeg?v=942100876554598688",
+            "price": "20.00",
+            "category": "Tours"
+        },
+        {
+            "article": "NEW 2019 Tour 4 Way Flex Fit Cap",
+            "image": "https://cdn.shopify.com/s/files/1/0139/0080/8246/products/20_4_Way_Flat_Flex_Hat_copy_grande.jpg?v=1569095379",
+            "price": "24.99",
+            "category": "Hats"
+        }, {
+            "article": "Riot Black Hat ",
+            "image": "https://cdn.shopify.com/s/files/1/0139/0080/8246/products/Riot_Black_Hat_grande.jpeg?v=1553201382",
+            "price": "24.99",
+            "category": "Hats"
+        }, {
+            "article": "NEW OUTSIDER 2019 TOUR ZIP UP HOODIE",
+            "image": "https://cdn.shopify.com/s/files/1/0139/0080/8246/products/Outsider_Hoodie_grande.jpg?v=1574212830",
+            "price": "44.99",
+            "category": "Hoodies"
+        }, {
+            "article": "Tour Ticket",
+            "image": "https://cdn.shopify.com/s/files/1/0139/0080/8246/t/2/assets/7750.jpeg?v=942100876554598688",
+            "price": "12.5",
+            "category": "Tours"
+        }, {
+            "article": "Tour Ticket",
+            "image": "https://cdn.shopify.com/s/files/1/0139/0080/8246/t/2/assets/7750.jpeg?v=942100876554598688",
+            "price": "12.5",
+            "category": "Tours"
+        }, {
+            "article": "Tour Ticket",
+            "image": "https://cdn.shopify.com/s/files/1/0139/0080/8246/t/2/assets/7750.jpeg?v=942100876554598688",
+            "price": "12.5",
+            "category": "Tours"
+        }, {
+            "article": "Tour Ticket",
+            "image": "https://cdn.shopify.com/s/files/1/0139/0080/8246/t/2/assets/7750.jpeg?v=942100876554598688",
+            "price": "12.5",
+            "category": "Tours"
+        }
     ]
+
 }

@@ -18,7 +18,7 @@ body {
     height: auto;
     padding: 10px 20px;
     .navbar-brand {
-        padding: 0;
+        padding-right: 10px;
         margin: auto 0;
         img {
             height: $navbar_height;
@@ -30,6 +30,80 @@ body {
         }
     }
     .collapse {
+        .search_bar_container {
+            width: 30vw;
+            @media screen and (max-width: 1170px) {
+                width: 17vw;
+            }
+            @media screen and (max-width: 992px) {
+                width: 90vw;
+                margin: auto;
+            }
+            .d_search {
+                position: relative;
+                width: 100%;
+                display: inline-block;
+                .d_search_bar {
+                    width: 100%;
+                    border-radius: 0;
+                }
+            }
+            .dropdown_content {
+                display: none;
+                position: absolute;
+                background-color: black;
+                width: 30vw;
+                @media screen and (max-width: 992px) {
+                    width: 90vw;
+                    margin: auto;
+                    position: relative;
+                }
+                height: 400px;
+                overflow: auto;
+                border: 1px solid #ddd;
+                border-top: 0;
+                z-index: 1;
+                .d_res_count {
+                    p {
+                        color: grey;
+                        font-size: 16px;
+                        margin: 10px;
+                    }
+                }
+                .d_s_items {
+                    .d_i_container {
+                        .d_searched_item {
+                            max-width: 95%;
+                            height: auto;
+                            display: flex;
+                            flex-direction: row;
+                            flex-wrap: nowrap;
+                            margin: 5px;
+                            transition: 0.5s;
+                            div {
+                                width: 50px;
+                                height: auto;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+                            p {
+                                color: white;
+                                margin: auto 0;
+                                margin-left: 5px;
+                            }
+                            p:hover {}
+                        }
+                        .d_searched_item:hover {
+                            background-color: blanchedalmond;
+                            p {
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         ul {
             .nav-item {
                  ::before {
@@ -40,6 +114,10 @@ body {
             }
         }
     }
+}
+
+* {
+    text-decoration: none !important;
 }
 
 .about_block {
@@ -54,50 +132,21 @@ body {
 }
 
 .b_block {
-    margin: auto;
-    width: $content_width;
+    width: 100%;
     @media screen and (max-width: 992px) {
         width: 100%;
     }
     height: auto;
-    background-color: rgba(0,
+    background-color: rgb(0,
     0,
-    0,
-    0.459);
+    0);
     color: white;
     padding-top: 20px;
     .b_m_info {
-        margin: auto;
-        width: 90%;
-        padding: 1%;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        .h_carousel {
-            width: $content_width/1.5;
-            height: 350px;
-            @media screen and (max-width: 992px) {
-                width: 100%;
-                height: auto;
-            }
-            div div img {
-                height: 350px;
-                border-radius: 5px;
-                width: auto;
-                background-color: white;
-                @media screen and (max-width: 992px) {
-                    height: auto;
-                }
-            }
-        }
-        .b_info {
-            font-size: 25px;
-            padding-top: 10px;
-            width: 350px;
-            margin: 0 auto;
-            text-align: left;
-        }
+        font-size: 20px;
+        color: white;
+        text-align: left;
+        padding-left: 20px;
     }
     hr {
         margin: 4px 0;
@@ -105,23 +154,47 @@ body {
     .b_text {
         margin: auto;
         width: 90%;
+        font-size: 20px;
+        @media screen and (max-width: 992px) {
+            font-size: 16px;
+        }
         padding: 1% 1%;
     }
 }
 
+.g_heading {
+    background-image: url("https://images.wallpaperscraft.com/image/guitar_bass_guitar_musical_instrument_119223_2560x1080.jpg");
+    /* Firefox 3.6+ */
+    -webkit-background-size: 100%;
+    /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%;
+    /* Opera 9.6+ */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    @media screen and (max-width: 992px) {
+        height: 100px;
+    }
+    display: flex;
+    align-items: center;
+    p {
+        letter-spacing: 5px;
+        text-align: center;
+        margin: auto;
+        color: white;
+        font-weight: bolder;
+        font-size: calc(2.16vh + 1rem);
+    }
+}
+
 .gallery {
-    padding-top: 10px;
-    width: $content_width;
+    width: 100%;
+    padding: 5%;
+    background-color: rgba(0, 0, 0, 0.534);
     margin: auto;
     hr {
         background-color: white;
-    }
-    .g_heading {
-        padding-top: 10px;
-        color: white;
-        h1 {
-            text-align: center;
-        }
     }
     .photos {
         margin: auto;
@@ -129,15 +202,34 @@ body {
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
+        background-color: rgb(0, 0, 0);
+        border-radius: 5px;
         .g_photo {
-            width: 45%;
-            height: auto;
+            width: 300px;
+            height: 300px;
+            @media screen and (max-width: 992px) {
+                width: 100%;
+                height: 300px;
+            }
+            overflow: hidden;
+            position: relative;
+            background-color: rgb(0,
+            0,
+            0);
             img {
                 width: 100%;
                 height: auto;
+                position: absolute;
+                top: 50%;
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                /* Move the image back up half its height */
             }
             margin: 5px;
             justify-content: center;
+        }
+        .g_photo:hover {
+            background-color: rgb(44, 37, 37);
         }
     }
 }
@@ -388,7 +480,7 @@ footer {
             flex-wrap: wrap;
             justify-content: space-around;
             width: 49%;
-            height: auto;
+            height: max-content;
             @media screen and (max-width: 992px) {
                 width: 100%;
             }
@@ -485,6 +577,155 @@ footer {
             background-color: black;
             color: white;
             text-align: center;
+            transition: 0.3s;
         }
+        .c_t_button:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+}
+
+.shop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    padding: 5%;
+    @media screen and (max-width: 992px) {
+        padding: 0;
+    }
+    background-color: rgba(255,
+    235,
+    205,
+    0.425);
+    .s_control {
+        width: 25%;
+        @media screen and (max-width: 992px) {
+            width: 100%;
+        }
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: black;
+        height: max-content;
+        @media screen and (max-width: 992px) {
+            border-radius: 0;
+        }
+        .s_c_category {
+            width: 100%;
+            margin: auto;
+            transition: 0.5s;
+            border: 1px solid black;
+            border-radius: 5px;
+            @media screen and (max-width: 992px) {
+                border-radius: 0;
+            }
+            .s_divider {
+                background-color: grey;
+                margin: 0;
+            }
+            p {
+                font-size: 22px;
+                font-weight: bold;
+                padding-left: 10px;
+                color: white;
+                margin: auto;
+                letter-spacing: 3px;
+            }
+        }
+        .s_c_category:hover {
+            background-color: white;
+            .s_divider {
+                background-color: black;
+            }
+            p {
+                color: black;
+            }
+        }
+    }
+    .s_item_container {
+        width: 70%;
+        @media screen and (max-width: 992px) {
+            width: 100%;
+            padding-top: 10px;
+        }
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        .s_item {
+            margin: 20px 8px;
+            margin-top: 0;
+            width: 250px;
+            @media screen and (max-width: 992px) {
+                width: 100%;
+            }
+            min-height: 400px;
+            height: max-content;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: black;
+            .s_i_heading {
+                width: 100%;
+                padding: 15px;
+                height: auto;
+                vertical-align: middle;
+                font-size: 20px;
+                color: white;
+                font-weight: 700;
+                letter-spacing: 2px;
+                word-wrap: break-word;
+            }
+            .s_i_image {
+                background-color: white;
+                height: auto;
+                width: 100%;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .s_i_price {
+                padding: 15px;
+                color: #c5c5c5;
+                font-size: 20px;
+            }
+            .s_i_btn {
+                padding: 15px;
+                padding-top: 0;
+                button {
+                    background-color: black;
+                    color: white;
+                    border-color: white;
+                    transition: 0.5s;
+                }
+                button:hover {
+                    background-color: white;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+.shop_heading {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    @media screen and (max-width: 992px) {
+        height: 100px;
+    }
+    display: flex;
+    align-items: center;
+    p {
+        letter-spacing: 5px;
+        text-align: center;
+        margin: auto;
+        color: white;
+        font-weight: bolder;
+        font-size: calc(2.16vh + 1rem);
     }
 }

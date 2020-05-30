@@ -12,6 +12,7 @@ import database from './database.json';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import getImgBytTitle from './images';
+import queryString from 'query-string';
 
 
 function getQueryVariable(variable) {
@@ -36,7 +37,6 @@ export class Header extends React.Component{
   }
   parseLocation(){
     let location = window.location.pathname.split("/").pop();
-    //console.log(window.location.search.split('?').pop())
     if(location.length == 0) location = "home";
     return location;
   }
@@ -52,7 +52,6 @@ export class Header extends React.Component{
     const items = document.getElementById('navigation').childNodes;
     items.forEach(item => {
       const text = item.childNodes[0].textContent.toLowerCase();
-      //console.log(`Comparing "${text}" and "${this.state.location}"`);
       if(text == location) item.setAttribute('class','nav-item active');
       else item.setAttribute('class','nav-item');
       window.scrollTo(0, 0);
@@ -68,6 +67,8 @@ export class Header extends React.Component{
           <span class="navbar-toggler-icon"></span>
         </button>
     <div class="collapse navbar-collapse " id="navbarResponsive">
+    <Search_bar/>
+    
       <ul class="navbar-nav ml-auto" id="navigation" onClick={this.setPosition}>
         <li class="nav-item " >
           <Link to="/" className="nav-link">Home</Link>
@@ -91,11 +92,114 @@ export class Header extends React.Component{
         <Link to="/shop" className="nav-link">Shop</Link>
         </li>
       </ul>
+      
     </div>
 </nav>
 
     )
   }
+}
+class Search_bar extends React.Component{
+  constructor(props)
+  {
+    super(props);
+    this.drop_bar = this.drop_bar.bind(this);
+    this.hide_bar = this.hide_bar.bind(this);
+    this.find = this.find.bind(this);
+    this.state = {items : null,i_count : 0};
+    
+  }
+  componentDidMount(){
+    $(document).click( () => this.hide_bar());
+  
+    $('.search_bar_container').click(function(event) {
+      const bar = $('.dropdown_content');
+      if(event.target.value == "")
+      { 
+        
+        bar.hide();
+      }
+      else
+      {
+        bar.slideDown(200);
+        bar.show();
+      } 
+        event.stopPropagation();
+    });
+  }
+  drop_bar(event){
+    console.log("Here "+event.target.value)
+    const bar = $('.dropdown_content');
+    if(event.target.value == "") 
+    {
+      
+      bar.hide();
+    }
+    else
+    {
+      bar.slideDown(200);
+      bar.show();
+      
+    }
+  }
+  hide_bar(){
+    const bar = $('.dropdown_content');
+    
+    bar.hide();
+  }
+  find(event){
+    let s_text = event.target.value;
+    let _items = [];
+    let el_count = 0;
+    if(s_text != "")
+    {
+      console.log(`Searching ${s_text}`)
+      database.Albums.forEach(album => {
+        if(album.name.toLowerCase().includes(s_text.toLowerCase())){
+          console.log("Match!");
+          _items.push(searched_item(album.image,album.name));
+        }
+      });
+    }
+    console.log(`Searched! ${_items}`)
+    this.setState(state => ({
+      items : _items, i_count : _items.length
+    }))
+  }
+  render(){
+    return(
+      <div className="search_bar_container">
+        <form class="form-inline my-2 my-lg-0 d_search" onSubmit={(event)=>{event.preventDefault()}}>
+          <input class="form-control mr-sm-2v d_search_bar" type="search" placeholder="Search" aria-label="Search" onInput={(event)=>{this.drop_bar(event); this.find(event)}} onClick={this.drop_bar}></input>
+        </form>
+      <div className="dropdown_content">
+        <div className="d_res_count">
+        <p>
+          Searched items : {this.state.i_count}
+        </p>
+        </div>
+        <hr className="f_hr"></hr>
+        <div className="d_s_items">
+          {this.state.items }
+        </div>
+      </div>
+    </div>
+    )
+  }
+}
+function searched_item(link,name)
+{
+  const _name = name.split(' ').join('_');
+  return(
+  <Link to={`/albums?aim=${_name}`}><div className="d_i_container">
+    <div className="d_searched_item">
+        <div><img src={link}></img></div>
+        <p>{name}</p>
+    </div>
+    <hr className="f_hr"></hr>
+    </div>
+    </Link> 
+  )
 }
 class Slider extends React.Component{
   constructor(props)
@@ -270,19 +374,42 @@ class Tour_Main extends React.Component{
     )
   }
 }
+class Tour_Bio extends React.Component{
+  constructor(props)
+  {
+    super(props);
+    this.state = {a_cover : getImgByTitle('Outsider cover'),a_heading: getImgByTitle('Outsider heading')};
+  }
+  render(){
+    return(
+      <article className="check_tour">
+          
+          <div className="c_t_description text-center">
+          <div className="c_t_heading">
+              <img src={require(`${this.state.a_heading}`)}></img>
+          </div>
+          </div>
+          <div className="c_t_i_container">
+          <img src={require(`${this.state.a_cover}`)}></img>
+          </div>
+          
+      </article>
+    )
+  }
+}
 export class Biography extends React.Component{
   render()
   {
     return (
+      <div>
+                <Tour_Bio/>
+                <div className="shop_heading">
+                <p>
+                BIOGRAPHY
+                </p>
+                </div>
       <main className="b_block">
-          <div className="b_m_info">
-            <Slider bg_1={getImgByTitle('b_p1')} bg_2={getImgByTitle('b_p2')} bg_3={getImgByTitle('b_p3')}/>
-            <div className="b_info">
-              <h1>Three Days Grace</h1>
-              <hr className="f_hr"></hr>
-              <p> <strong>Genres :</strong>Post-grunge/hard rock/alternative metal/alternative rock/nu metal</p>
-            </div>
-          </div>
+
           <hr className="f_hr"></hr>
           <div className="b_text">
           Three Days Grace is a Canadian rock band formed in Norwood, Ontario in 1997. Based in Toronto, the band's original line-up consisted of guitarist and lead vocalist Adam Gontier, drummer and backing vocalist Neil Sanderson, and bassist Brad Walst. In 2003, Barry Stock was recruited as the band's lead guitarist, making them a four-member band.<br></br> In 2013, Gontier left the band and was replaced by My Darkest Days' vocalist Matt Walst, who is also the younger brother of bassist Brad Walst.<br></br>
@@ -307,6 +434,7 @@ export class Biography extends React.Component{
 
           </div>
       </main>
+      </div>
     )
   }
 }
@@ -495,17 +623,18 @@ export class Gallery extends React.Component{
   {
     
     return(
-      <div className="gallery" >
+      <div>
         <div className="g_heading">
-          <h1>Gallery</h1>
+          <p>GALLERY</p>
         </div>
-        <hr></hr>
+      <div className="gallery" >
         <div className="photos">
           {this.state.photos}
         </div>
         <div className="g_pagination">
           <Pagination change_page={this.setPage}/>
         </div>
+      </div>
       </div>
     )
   }
@@ -514,6 +643,21 @@ export class Albums extends React.Component{
   constructor(props){
     super(props);
     this.state = {albums: null}
+    setTimeout(() => {
+      const aim = queryString.parse(window.location.search).aim;
+      const t_item = $(`#${aim}_album`);
+      if(t_item[0]) 
+      {
+        const pos = t_item.position().top;
+        const decrement = (window.screen.width*75)/411;
+        console.log(window.screen.width);
+        window.scrollTo({
+          top: pos-decrement,
+          behavior: "smooth"
+      });
+      }
+      
+    }, 1000);
 
   }
   componentDidMount(){
@@ -577,8 +721,8 @@ class A_Item extends React.Component{
     return(
 
       <div className="a_item" onPlay={this.stopSong}>
-        <div className="a_info">
-          <img src={this.props.album.image}></img>
+        <div className="a_info"  >
+          <img src={this.props.album.image} id={this.props.album.name.split(' ').join('_') + "_album"}></img>
           <div className="a_item_desc">
             <p  className="a_article">
               <bold>{this.props.album.name}</bold>
@@ -601,6 +745,7 @@ class A_Item extends React.Component{
           </tbody>
         </table>
         </div>
+        
         <hr className="c_hr"></hr>
       </div>
       

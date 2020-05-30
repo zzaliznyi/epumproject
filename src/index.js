@@ -6,6 +6,7 @@ import {Header} from './App';
 import {Gallery} from './App';
 import {Albums} from './App'
 import {Footer} from './App'
+import Shop from './Shop';
 import Home from "./App";
 import Contacts from "./Contacts";
 import * as serviceWorker from './serviceWorker';
@@ -37,6 +38,9 @@ ReactDOM.render(
         </Route>
         <Route exact path="/contacts">
             <Contacts/>
+        </Route>
+        <Route exact path="/shop">
+            <Shop/>
         </Route>
     </Switch>
     <Footer/>
