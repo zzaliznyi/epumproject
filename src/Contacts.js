@@ -5,6 +5,11 @@ import React from 'react';
 class Contacts extends React.Component{
     render(){
         return(
+            <div>
+                <div className="c_header">
+                <p>CONTACTS</p>
+            </div>
+           
                 <div className="contacts_container">
 
                     <div className="contacts_map">
@@ -14,47 +19,68 @@ class Contacts extends React.Component{
                     </div>
                     <br></br>
                     <hr className="c_hr"></hr>
-                    <Contacts_Form/>
                     <div className="contacts_row">
                         <div className="c_address">
-                            <h2>Our address :</h2>
+                            <h2>MANAGEMENT</h2>
                             <hr className="f_hr"></hr>
                             <div className = "c_a_block">
-                                <img  className="contacts_label" src='./images/adress_k.png'></img>
-                                
+                            Mike Lynch / Arc Flame Entertainment Ltd.<br></br>
+                            contact@arcflame.net <br></br>
+                            www.arcflame.net
+                            </div>
+                        </div>
+                        <div className="c_address">
+                            <h2>MANAGEMENT</h2>
+                            <hr className="f_hr"></hr>
+                            <div className = "c_a_block">
+                            Mike Lynch / Arc Flame Entertainment Ltd.<br></br>
+                            contact@arcflame.net <br></br>
+                            www.arcflame.net
+                            </div>
+                        </div>
+                        <div className="c_address">
+                            <h2>MANAGEMENT</h2>
+                            <hr className="f_hr"></hr>
+                            <div className = "c_a_block">
+                            Mike Lynch / Arc Flame Entertainment Ltd.<br></br>
+                            contact@arcflame.net <br></br>
+                            www.arcflame.net
+                            </div>
+                        </div>
+                        <div className="c_address">
+                            <h2>MANAGEMENT</h2>
+                            <hr className="f_hr"></hr>
+                            <div className = "c_a_block">
+                            Mike Lynch / Arc Flame Entertainment Ltd.<br></br>
+                            contact@arcflame.net <br></br>
+                            www.arcflame.net
+                            </div>
+                        </div>
+                        <div className="c_address">
+                            <h2>MANAGEMENT</h2>
+                            <hr className="f_hr"></hr>
+                            <div className = "c_a_block">
+                            Mike Lynch / Arc Flame Entertainment Ltd.<br></br>
+                            contact@arcflame.net <br></br>
+                            www.arcflame.net
+                            </div>
+                        </div>
+                        <div className="c_address">
+                            <h2>MANAGEMENT</h2>
+                            <hr className="f_hr"></hr>
+                            <div className = "c_a_block">
+                            Mike Lynch / Arc Flame Entertainment Ltd.<br></br>
+                            contact@arcflame.net <br></br>
+                            www.arcflame.net
                             </div>
                         </div>
                     </div>
                 </div>
-
+                </div>
                         
 
         )
     }
 }
-class Contacts_Form extends React.Component{
-    constructor(props)
-    {
-        super(props);
-    }
-    render() {
-        return (
-            <div className="contacts_row">
-                <h2>Contact US!</h2>
-                <hr className="c_hr"></hr>
-                <form>
-                    <h5>Leave your email and name below!</h5>
-                    <hr className="c_hr"></hr>
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="c_us_email" aria-describedby="emailHelp" placeholder="Enter email"></input>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="c_us_name" placeholder="Name"></input>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-            </div>
-        )
-    }
-}
+
 export default Contacts;

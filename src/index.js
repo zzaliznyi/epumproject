@@ -8,6 +8,7 @@ import {Albums} from './App'
 import {Footer} from './App'
 import Shop from './Shop';
 import Home from "./App";
+import Tours from './Tours';
 import Contacts from "./Contacts";
 import * as serviceWorker from './serviceWorker';
 import {
@@ -38,6 +39,9 @@ ReactDOM.render(
         </Route>
         <Route exact path="/contacts">
             <Contacts/>
+        </Route>
+        <Route exact path="/tours">
+            <Tours/>
         </Route>
         <Route exact path="/shop">
             <Shop/>
