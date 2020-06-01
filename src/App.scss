@@ -708,6 +708,12 @@ footer {
                 letter-spacing: 3px;
             }
         }
+        .s_c_category.sort {
+            option {
+                background-color: black;
+                color: white;
+            }
+        }
         .s_c_category:hover {
             background-color: white;
             .s_divider {
