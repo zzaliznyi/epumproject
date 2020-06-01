@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.scss';
 import {getImgByTitle} from '../modules/images';
 import {Link} from 'react-router-dom';
+import {forcePosition} from '../modules/additional';
 import 'react-h5-audio-player/lib/styles.css';
 export default class Home extends React.Component{
     render(){
@@ -157,7 +158,7 @@ class Tour_Main extends React.Component{
                     <img src={require(`${this.state.a_heading}`)} alt="New tour poster"></img>
                 </div>
                 <h1>Check the tour table!</h1>
-                <Link to="/tours"><button type="button" class="btn c_t_button btn-lg ">CHECK OUT</button></Link>
+                <Link to="/tours"><button type="button" class="btn c_t_button btn-lg " onClick={ () =>{forcePosition('tours')}}>CHECK OUT</button></Link>
             </div>
             <div className="c_t_i_container">
                 <img src={require(`${this.state.a_cover}`)} alt="Outsider album cover"></img>

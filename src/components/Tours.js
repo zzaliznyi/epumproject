@@ -3,10 +3,12 @@ import React from 'react';
 import '../App.scss';
 
 import { Link } from 'react-router-dom';
+import {forcePosition} from '../modules/additional';
 
 export default class Tours extends React.Component {
     constructor(props) {
         super(props);
+        
     }
     render() {
         return (
@@ -32,7 +34,7 @@ export default class Tours extends React.Component {
                         Moskva, Russia
                     </div>
                     <div className="t_button">
-                        <Link to="/shop?category=Tours"><button type="button" class="btn btn-primary  btn-block">BUY TICKETS</button></Link>
+                        <Link to="/shop?category=Tours"><button type="button" class="btn btn-primary  btn-block" onClick={ () =>{forcePosition('shop')}}>BUY TICKETS</button></Link>
                     </div>
                 </div>
                 <hr className="f_hr"></hr>
@@ -47,7 +49,7 @@ export default class Tours extends React.Component {
                         Moskva, Russia
                     </div>
                     <div className="t_button">
-                        <Link to="/shop?category=Tours"><button type="button" class="btn btn-primary  btn-block">BUY TICKETS</button></Link>
+                        <Link to="/shop?category=Tours"><button type="button" class="btn btn-primary  btn-block" onClick={ () =>{forcePosition('shop')}}>BUY TICKETS</button></Link>
                     </div>
                 </div>
                 <hr className="f_hr"></hr>
@@ -62,7 +64,7 @@ export default class Tours extends React.Component {
                         Moskva, Russia
                     </div>
                     <div className="t_button">
-                        <Link to="/shop?category=Tours"><button type="button" class="btn btn-primary  btn-block">BUY TICKETS</button></Link>
+                        <Link to="/shop?category=Tours"><button type="button" class="btn btn-primary  btn-block" onClick={ () =>{forcePosition('shop')}}>BUY TICKETS</button></Link>
                     </div>
                 </div>
                 <hr className="f_hr"></hr>
@@ -77,7 +79,7 @@ export default class Tours extends React.Component {
                         Moskva, Russia
                     </div>
                     <div className="t_button">
-                        <Link to="/shop?category=Tours"><button type="button" class="btn btn-primary  btn-block">BUY TICKETS</button></Link>
+                        <Link to="/shop?category=Tours"><button type="button" class="btn btn-primary  btn-block" onClick={ () =>{forcePosition('shop')}}>BUY TICKETS</button></Link>
                     </div>
                 </div>
                 <hr className="f_hr"></hr>
@@ -92,7 +94,7 @@ export default class Tours extends React.Component {
                         Moskva, Russia
                     </div>
                     <div className="t_button">
-                        <Link to="/shop?category=Tours"><button type="button" class="btn btn-primary  btn-block">BUY TICKETS</button></Link>
+                        <Link to="/shop?category=Tours"><button type="button" class="btn btn-primary  btn-block" onClick={ () =>{forcePosition('shop')}}>BUY TICKETS</button></Link>
                     </div>
                 </div>
                 <hr className="f_hr"></hr>
@@ -107,7 +109,7 @@ export default class Tours extends React.Component {
                         Moskva, Russia
                     </div>
                     <div className="t_button">
-                        <Link to="/shop?category=Tours"><button type="button" class="btn btn-primary  btn-block">BUY TICKETS</button></Link>
+                        <Link to="/shop?category=Tours"><button type="button" class="btn btn-primary  btn-block" onClick={ () =>{forcePosition('shop')}}>BUY TICKETS</button></Link>
                     </div>
                 </div>
                 <hr className="f_hr"></hr>
@@ -122,7 +124,7 @@ export default class Tours extends React.Component {
                         Moskva, Russia
                     </div>
                     <div className="t_button">
-                        <Link to="/shop?category=Tours"><button type="button" class="btn btn-primary  btn-block">BUY TICKETS</button></Link>
+                        <Link to="/shop?category=Tours"><button type="button" class="btn btn-primary  btn-block" onClick={ () =>{forcePosition('shop')}}>BUY TICKETS</button></Link>
                     </div>
                 </div>
                 <hr className="f_hr"></hr>
