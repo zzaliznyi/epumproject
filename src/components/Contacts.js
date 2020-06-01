@@ -24,54 +24,47 @@ class Contacts extends React.Component{
                             <h2>MANAGEMENT</h2>
                             <hr className="f_hr"></hr>
                             <div className = "c_a_block">
-                            Mike Lynch / Arc Flame Entertainment Ltd.<br></br>
-                            contact@arcflame.net <br></br>
-                            www.arcflame.net
+                            Jim Morewood<br></br>
+                            info@k2ours.com
                             </div>
                         </div>
                         <div className="c_address">
-                            <h2>MANAGEMENT</h2>
+                            <h2>BOOKING (FINLAND)</h2>
                             <hr className="f_hr"></hr>
                             <div className = "c_a_block">
-                            Mike Lynch / Arc Flame Entertainment Ltd.<br></br>
-                            contact@arcflame.net <br></br>
-                            www.arcflame.net
+                            Jukka Varmo<br></br>
+                            jukka.varmo@livenation.fi
                             </div>
                         </div>
                         <div className="c_address">
-                            <h2>MANAGEMENT</h2>
+                            <h2>INTERVIEWS & PROMO</h2>
                             <hr className="f_hr"></hr>
                             <div className = "c_a_block">
-                            Mike Lynch / Arc Flame Entertainment Ltd.<br></br>
-                            contact@arcflame.net <br></br>
-                            www.arcflame.net
+                            promo@insomniac-music.com
                             </div>
                         </div>
                         <div className="c_address">
-                            <h2>MANAGEMENT</h2>
+                            <h2>RECORD LABEL</h2>
                             <hr className="f_hr"></hr>
                             <div className = "c_a_block">
-                            Mike Lynch / Arc Flame Entertainment Ltd.<br></br>
-                            contact@arcflame.net <br></br>
-                            www.arcflame.net
+                            Insomniac<br></br>
+                            info@insomniac-music.com
                             </div>
                         </div>
                         <div className="c_address">
-                            <h2>MANAGEMENT</h2>
+                            <h2>DISTRIBUTOR</h2>
                             <hr className="f_hr"></hr>
                             <div className = "c_a_block">
-                            Mike Lynch / Arc Flame Entertainment Ltd.<br></br>
-                            contact@arcflame.net <br></br>
-                            www.arcflame.net
+                            Playground Music
                             </div>
                         </div>
+                        
                         <div className="c_address">
-                            <h2>MANAGEMENT</h2>
+                            <h2>Three Days Grace</h2>
                             <hr className="f_hr"></hr>
                             <div className = "c_a_block">
-                            Mike Lynch / Arc Flame Entertainment Ltd.<br></br>
-                            contact@arcflame.net <br></br>
-                            www.arcflame.net
+                            store@backstagerockshop.com
+                            only for matters concerning orders from <br></br>the official webshop at shop.threedaysgrace.com
                             </div>
                         </div>
                     </div>

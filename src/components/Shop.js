@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.scss';
+import $ from 'jquery';
 import {getImgByTitle} from '../modules/images';
 import database from '../database/database.json';
 import queryString from 'query-string';
@@ -9,14 +10,18 @@ export default class Shop extends React.Component{
     constructor(props)
     {
         super(props);
-        this.state = {category : null}
+        this.state = {category : null,sort:null}
         this.setCategory = this.setCategory.bind(this);
+        this.setSort = this.setSort.bind(this);
 
     }
     setCategory(category){
         this.setState({category});
-        console.log("Setting..." + category);
-        this.refs.s_items.setFilter(category);
+        this.refs.s_items.setCategory(category);
+    }
+    setSort(sort){
+        this.setState({sort});
+        this.refs.s_items.setSort(sort);
     }
    
     render(){
@@ -24,13 +29,13 @@ export default class Shop extends React.Component{
             <div>
                 <Tour_Main/>
                 <div className="shop_heading">
-                <p>
-                SHOP
-                </p>
+                    <p>
+                        SHOP
+                    </p>
                 </div>
                 <div className="shop">
-                    <S_control setCategory={this.setCategory}/>
-                    <Shop_items category={this.state.category} ref="s_items"/>
+                    <S_control setCategory={this.setCategory} setSort = {this.setSort}/>
+                    <Shop_items  ref="s_items"/>
                 </div>
                 <Mail_order/>
             </div>
@@ -41,54 +46,37 @@ class Shop_items extends React.Component{
     constructor(props)
     {
         super(props);
-        this.state ={ items:null};
-        this.reload = this.reload.bind(this);
-        this.setFilter = this.setFilter.bind(this);
+        this.state ={ items:null , category : null , sort: null};
+        this.load_items = this.load_items.bind(this);
+        this.setCategory = this.setCategory.bind(this);
+        this.setSort = this.setSort.bind(this);
     }
-    setFilter(category){
-        const filter = category;
-        const _items = [];
-        database.Shop.forEach(item => {
-            if(item.category == filter || filter == "All")_items.push(<S_item item={item}/>);
-            console.log(`Items: ${item.article}`)
+    setCategory(category){
+        this.load_items(category , this.state.sort);
+    }
+    setSort(sort){
+        this.load_items(this.state.category , sort);
+    }
+    load_items(category,sort){
+        const sorted = sort_items(sort,database.Shop);
+        console.log(sorted);
+        console.log(category);
+        const filtered = [];
+        sorted.forEach(item => {
+            if(item.category == category || category == "All") filtered.push(<S_item item={item}/>);
         });
         this.setState(state =>({
-            items : _items
+            items : filtered, category : category ,sort : sort
         }))
     }
 
     componentDidMount(){
         let aim = queryString.parse(window.location.search).category;
-        if(this.props.category) aim =this.props.category;
-        console.log("Updating " + this.props.category)
-        const _items = [];
-        console.log(`aim : ${aim}`);
-        if(aim)
-        {
-            database.Shop.forEach(item => {
-                if(item.category == aim)_items.push(<S_item item={item}/>);
-                console.log(`Items: ${item.article}`)
-            });
-        }
-        else 
-        {
-            database.Shop.forEach(item => {
-                _items.push(<S_item item={item}/>);
-            });
-        }
-        this.setState(state =>({
-            items : _items
-        }))
-    }
-    reload(){
-        const _items = [];
-        database.Shop.forEach(item => {
-            if(item.category == this.props.category)_items.push(<S_item item={item}/>);
-            console.log(`Items: ${item.article}`)
-        });
-        this.setState(state =>({
-            items : _items
-        }))
+        if(this.props.category) aim = this.props.category;
+        if(aim == "") aim = "All"
+        const sort = "Cheap -> Expensive";
+        this.load_items(aim,sort);
+        console.log("Did Munt!")
     }
     render(){
         return(
@@ -138,6 +126,14 @@ class S_control extends React.Component{
     componentDidMount(){
         const categories = getCategoryList(database.Shop);
         const c_output = [];
+        c_output.push(<div className="s_c_category sort">
+            <select class="form-control" id="sort_selection" onChange = {(event)=>{this.s_clicked()}}>
+                <option>Cheap -> Expensive</option>
+                <option>Expensive -> Cheap</option>
+                <option>A -> Z</option>
+                <option>Z -> A</option>
+            </select>
+        </div>);
         c_output.push(<Category_block setCategory={this.c_clicked} category="All"/>)
         categories.forEach(category => {
             c_output.push(<Category_block setCategory={this.c_clicked} category={category}/>);
@@ -148,7 +144,10 @@ class S_control extends React.Component{
     }
     c_clicked(category){
         this.props.setCategory(category);
-        console.log("C_Click")
+    }
+    s_clicked(){
+        const sort = $('#sort_selection').val();
+        this.props.setSort(sort);
     }
 
     render(){
@@ -272,3 +271,45 @@ class Tour_Main extends React.Component{
           )
       }
   }
+function sort_items(sort,array){
+    if(sort == "A -> Z")
+    {
+        return array.sort(function(a, b) {
+            const nameA = a.article.toUpperCase(); 
+            const nameB = b.article.toUpperCase(); 
+            if (nameA < nameB) {
+              return -1;
+            }
+            if (nameA > nameB) {
+              return 1;
+            }
+            return 0;
+          });
+    }
+    if(sort == "Z -> A")
+    {
+        return array.sort(function(a, b) {
+            const nameA = a.article.toUpperCase(); 
+            const nameB = b.article.toUpperCase(); 
+            if (nameA > nameB) {
+              return -1;
+            }
+            if (nameA < nameB) {
+              return 1;
+            }
+            return 0;
+          });
+    }
+    if(sort == "Cheap -> Expensive")
+    {
+        return array.sort(function (a, b) {
+            return a.price - b.price;
+          });
+    }
+    if(sort == "Expensive -> Cheap")
+    {
+        return array.sort(function (a, b) {
+            return b.price - a.price;
+          });
+    }
+}

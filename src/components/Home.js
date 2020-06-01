@@ -67,68 +67,81 @@ class W_new extends React.Component{
                     </div>
                     <div className="w_new_articles">
                         <article className= "w_article">
-                            <img className="w_article_logo" src="https://i.pinimg.com/originals/7f/d3/38/7fd33802d65f0299fbd13045c71c76fc.png"></img>
+                            <img className="w_article_logo" src="https://threedaysgrace.com/wp-content/uploads/2020/04/Screen-Shot-2020-04-13-at-1.56.27-PM.png" alt="news image"></img>
                             <div className="w_article_text">
                                 <p className="wam_text">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis ullam quasi ad officia similique asperiores laborum? Fuga, voluptatem sequi ipsa tenetur, quisquam vitae ipsum adipisci enim, totam unde sint repellendus?
+                                We hope everyone is being safe and staying healthy during these weird times! “Strange Days” is about sticking together, supporting each other, and keeping your head up and carrying on during scary and uncertain times. With that said, we wanted to share a cool & eerie “Strange Days” video made […] 
                                 </p>
                                 <p className="wam_date">
-                                March,21,2015 4:52PM
+                                16 APR 2020
                                 </p>
                             </div>
                         </article>
                         <hr className="f_hr"></hr>
                         <article className= "w_article">
-                            <img className="w_article_logo" src="https://i.pinimg.com/originals/7f/d3/38/7fd33802d65f0299fbd13045c71c76fc.png"></img>
+                            <img className="w_article_logo" src="https://threedaysgrace.com/wp-content/uploads/2020/03/Three-Days-Grace-232.jpg" alt="news image"></img>
                             <div className="w_article_text">
                                 <p className="wam_text">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis ullam quasi ad officia similique asperiores laborum? Fuga, voluptatem sequi ipsa tenetur, quisquam vitae ipsum adipisci enim, totam unde sint repellendus?
+                                Three Days Grace are performing at Casino Rama Resort in Orillia, ON on July 24. Tickets go on sale Saturday, March 14 at noon local time HERE.   
                                 </p>
                                 <p className="wam_date">
-                                March,21,2015 4:52PM
-                                </p>
-                            </div>
-                        </article>
-                            <hr className="f_hr"></hr>
-                            <article className= "w_article">
-                            <img className="w_article_logo" src="https://i.pinimg.com/originals/7f/d3/38/7fd33802d65f0299fbd13045c71c76fc.png"></img>
-                            <div className="w_article_text">
-                                <p className="wam_text">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis ullam quasi ad officia similique asperiores laborum? Fuga, voluptatem sequi ipsa tenetur, quisquam vitae ipsum adipisci enim, totam unde sint repellendus?
-                                </p>
-                                <p className="wam_date">
-                                March,21,2015 4:52PM
+                                9 MAR 2020
                                 </p>
                             </div>
                         </article>
                         <hr className="f_hr"></hr>
-                            <article className= "w_article">
-                            <img className="w_article_logo" src="https://i.pinimg.com/originals/7f/d3/38/7fd33802d65f0299fbd13045c71c76fc.png"></img>
+                        <article className= "w_article">
+                            <img className="w_article_logo" src="https://threedaysgrace.com/wp-content/uploads/2019/12/67160484_10158685813196679_1613058792889516032_o.jpg" alt="news image"></img>
                             <div className="w_article_text">
                                 <p className="wam_text">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis ullam quasi ad officia similique asperiores laborum? Fuga, voluptatem sequi ipsa tenetur, quisquam vitae ipsum adipisci enim, totam unde sint repellendus?
+                                Three Days Grace wish Jason from Five Finger Death Punch a speedy recovery! Sorry to our fans who were looking forward to seeing us in Duluth, Omaha and Des Moines. Full statement from Five Finger Death Punch below: Last night, Jason Hook was taken to the emergency room where it […]
                                 </p>
                                 <p className="wam_date">
-                                March,21,2015 4:52PM
+                                13 DEC 2019
                                 </p>
                             </div>
                         </article>
                         <hr className="f_hr"></hr>
-                            <article className= "w_article">
-                            <img className="w_article_logo" src="https://i.pinimg.com/originals/7f/d3/38/7fd33802d65f0299fbd13045c71c76fc.png"></img>
+                        <article className= "w_article">
+                            <img className="w_article_logo" src="https://threedaysgrace.com/wp-content/uploads/2019/12/3dg_holidaysale-screenshot.png" alt="news image"></img>
                             <div className="w_article_text">
                                 <p className="wam_text">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis ullam quasi ad officia similique asperiores laborum? Fuga, voluptatem sequi ipsa tenetur, quisquam vitae ipsum adipisci enim, totam unde sint repellendus?
+                                Happy Holidays from 3DG! 🎁❄️ Get up to 50% off on all merch, which includes gear from the road, now through midnight PT on Saturday, December 7! Shop now HERE.
                                 </p>
                                 <p className="wam_date">
-                                March,21,2015 4:52PM
+                                2 DEC 2019
                                 </p>
                             </div>
                         </article>
                         <hr className="f_hr"></hr>
+                        <article className= "w_article">
+                            <img className="w_article_logo" src="https://threedaysgrace.com/wp-content/uploads/2019/08/Screen-Shot-2019-08-12-at-2.10.37-PM.png" alt="news image"></img>
+                            <div className="w_article_text">
+                                <p className="wam_text">
+                                Three Days Grace have announced a fall tour with Five Finger Death Punch in the U.S. (bolded below)! Ticket pre-sale for 3DG newsletter subscribers begins Wednesday, July 24 at 10am ET HERE. An email will be sent today with the pre-sale password. For future pre-sales, please sign up for the […]
+                                </p>
+                                <p className="wam_date">
+                                19 AUG 2019
+                                </p>
+                            </div>
+                        </article>
+                        <hr className="f_hr"></hr>
+                        <article className= "w_article">
+                            <img className="w_article_logo" src="https://threedaysgrace.com/wp-content/uploads/2019/07/5fdp_admatalldates_large.jpg" alt="news image"></img>
+                            <div className="w_article_text">
+                                <p className="wam_text">
+                                Three Days Grace are performing at Casino Rama Resort in Orillia, ON on July 24. Tickets go on sale Saturday, March 14 at noon local time HERE.   
+                                </p>
+                                <p className="wam_date">
+                                23 JUL 2019
+                                </p>
+                            </div>
+                        </article>
+  
                     </div>
                 </div>
             </div>
+            
       )
     }
   }
