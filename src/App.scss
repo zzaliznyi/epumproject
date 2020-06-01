@@ -1,30 +1,34 @@
-$navbar_height: 50px;
+$navbar_p_height: 50px;
 $m_content_padding:15%;
 $content_width: 85%;
+$s_padding: 10px 20px;
+$page_font: 'Franklin Gothic Medium',
+'Arial Narrow',
+Arial,
+sans-serif;
 body {
     margin: 0;
+    padding: 0;
     list-style: none;
     background-image: url('./images/backgorund_tm.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    padding: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: $page_font
 }
 
 .navbar {
     background: rgb(0, 0, 0);
-    background: black;
     height: auto;
-    padding: 10px 20px;
+    padding: $s_padding;
     .navbar-brand {
         padding-right: 10px;
         margin: auto 0;
         img {
-            height: $navbar_height;
+            height: $navbar_p_height;
             width: auto;
             @media screen and (max-width: 992px) {
-                height: $navbar_height/2;
+                height: $navbar_p_height/2;
                 width: auto;
             }
         }
@@ -36,7 +40,7 @@ body {
                 width: 17vw;
             }
             @media screen and (max-width: 992px) {
-                width: 90vw;
+                width: 100%;
                 margin: auto;
             }
             .d_search {
@@ -54,11 +58,11 @@ body {
                 background-color: black;
                 width: 30vw;
                 @media screen and (max-width: 992px) {
-                    width: 90vw;
+                    width: 100%;
                     margin: auto;
                     position: relative;
+                    height: auto;
                 }
-                height: 400px;
                 overflow: auto;
                 border: 1px solid #ddd;
                 border-top: 0;
@@ -73,12 +77,12 @@ body {
                 .d_s_items {
                     .d_i_container {
                         .d_searched_item {
-                            max-width: 95%;
+                            max-width: 100%;
                             height: auto;
                             display: flex;
                             flex-direction: row;
                             flex-wrap: nowrap;
-                            margin: 5px;
+                            padding: 5px;
                             transition: 0.5s;
                             div {
                                 width: 50px;
@@ -95,7 +99,7 @@ body {
                             p:hover {}
                         }
                         .d_searched_item:hover {
-                            background-color: blanchedalmond;
+                            background-color: white;
                             p {
                                 color: black;
                             }
@@ -106,10 +110,34 @@ body {
         }
         ul {
             .nav-item {
-                 ::before {
+                .regular::before {
                     content: "";
                     margin: 0 16px 0 0;
                     border-left: 1px solid rgb(255, 255, 255);
+                    @media screen and (max-width: 992px) {
+                        margin: 0;
+                        border: 0;
+                    }
+                }
+                .regular {
+                    cursor: pointer;
+                    .dropdown-menu {
+                        background-color: black;
+                        right: 0px;
+                        left: 80%;
+                        margin-left: auto;
+                        li {
+                            color: rgba(255, 255, 255, 0.514);
+                            padding-left: 10px;
+                            @media screen and (max-width: 992px) {
+                                padding-left: 50px;
+                            }
+                            transition: 0.5s;
+                        }
+                        li:hover {
+                            color: white;
+                        }
+                    }
                 }
             }
         }
@@ -120,15 +148,28 @@ body {
     text-decoration: none !important;
 }
 
-.about_block {
-    width: 100%;
-    height: 600px;
-    background-color: black;
-}
-
-.h_carousel div {
-    width: 100%;
-    height: auto;
+.h_carousel {
+    div {
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        background-color: black !important;
+        div {
+            img {
+                height: auto;
+                max-width: 100%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+        }
+        @media screen and (max-width: 992px) {
+            height: 200px;
+        }
+    }
 }
 
 .b_block {
@@ -364,12 +405,15 @@ body {
 
 .song-table {
     background-color: black;
-    color: yellow;
+    color: white;
 }
 
 .player_slot {
     width: 40%;
     height: auto;
+    @media screen and (max-width: 992px) {
+        width: 20%;
+    }
 }
 
 .a_name {
@@ -692,20 +736,24 @@ footer {
                 width: 100%;
             }
             min-height: 400px;
-            height: max-content;
+            height: auto;
             border: 1px solid black;
             border-radius: 5px;
             background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
             .s_i_heading {
                 width: 100%;
-                padding: 15px;
                 height: auto;
+                padding: 15px;
                 vertical-align: middle;
                 font-size: 20px;
                 color: white;
                 font-weight: 700;
                 letter-spacing: 2px;
                 word-wrap: break-word;
+                margin-bottom: auto;
             }
             .s_i_image {
                 background-color: white;
@@ -716,23 +764,28 @@ footer {
                     height: 100%;
                 }
             }
-            .s_i_price {
-                padding: 15px;
-                color: #c5c5c5;
-                font-size: 20px;
-            }
-            .s_i_btn {
-                padding: 15px;
-                padding-top: 0;
-                button {
-                    background-color: black;
-                    color: white;
-                    border-color: white;
-                    transition: 0.5s;
+            .s_i_buy {
+                width: 100%;
+                .s_i_price {
+                    width: 100%;
+                    padding: 15px;
+                    color: #c5c5c5;
+                    font-size: 20px;
                 }
-                button:hover {
-                    background-color: white;
-                    color: black;
+                .s_i_btn {
+                    width: 100%;
+                    padding: 15px;
+                    padding-top: 0;
+                    button {
+                        background-color: black;
+                        color: white;
+                        border-color: white;
+                        transition: 0.5s;
+                    }
+                    button:hover {
+                        background-color: white;
+                        color: black;
+                    }
                 }
             }
         }

@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import {Biography} from './App';
-import {Header} from './App';
-import {Gallery} from './App';
-import {Albums} from './App'
-import {Footer} from './App'
-import Shop from './Shop';
-import Home from "./App";
-import Tours from './Tours';
-import Contacts from "./Contacts";
+import Biography from './components/Biography';
+import Header from './components/Header';
+import Gallery from './components/Gallery';
+import Albums from './components/Albums'
+import Footer from './components/Footer'
+import Shop from './components/Shop';
+import Home from "./components/Home";
+import Tours from './components/Tours';
+import Contacts from "./components/Contacts";
 import * as serviceWorker from './serviceWorker';
 import {
   BrowserRouter as Router,

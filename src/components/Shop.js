@@ -1,17 +1,7 @@
 import React from 'react';
-import logo from './images/logo.png'
-import $ from 'jquery'
-import './App.scss';
-import {getImgByTitle} from './images';
-import{getImgById} from "./images";
-import{getPages} from "./images";
-import { render } from '@testing-library/react';
-import { Router, Route, Switch } from "react-router";
-import {Link} from 'react-router-dom';
-import database from './database.json';
-import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
-import getImgBytTitle from './images';
+import '../App.scss';
+import {getImgByTitle} from '../modules/images';
+import database from '../database/database.json';
 import queryString from 'query-string';
 import emailjs from 'emailjs-com';
 

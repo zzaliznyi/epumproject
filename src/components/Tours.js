@@ -1,19 +1,9 @@
 import React from 'react';
-import logo from './images/logo.png'
-import $ from 'jquery'
-import './App.scss';
-import { getImgByTitle } from './images';
-import { getImgById } from "./images";
-import { getPages } from "./images";
-import { render } from '@testing-library/react';
-import { Router, Route, Switch } from "react-router";
+
+import '../App.scss';
+
 import { Link } from 'react-router-dom';
-import database from './database.json';
-import AudioPlayer from 'react-h5-audio-player';
-import 'react-h5-audio-player/lib/styles.css';
-import getImgBytTitle from './images';
-import queryString from 'query-string';
-import emailjs from 'emailjs-com';
+
 export default class Tours extends React.Component {
     constructor(props) {
         super(props);
