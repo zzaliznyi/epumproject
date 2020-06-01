@@ -34,7 +34,9 @@ export default class Header extends React.Component{
     });
     $(document).click( () => {
         $('.dropdown-menu').attr('class','dropdown-menu');
+        $('.navbar-collapse.collapse.show').attr('class','navbar-collapse collapse')
     });
+    $('navbar-collapse.collapse.show').click((e) =>{e.stopPropagation()});
 
     this.setState(state=>({
         categories : c_template
